@@ -1,0 +1,219 @@
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/* reset */
+
+/* start editing from here */
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+/*end reset*/
+/****-----start-body----****/
+
+.form-login{
+	width: 100%;
+}
+.user {
+	text-align: right;
+	vertical-align: middle;
+	margin-right: 5.2em;
+}
+.login{
+	padding:2em 0;
+}
+.inset {
+	position:relative;
+	background: #2C3E50;
+	padding: 2em 2em;
+	border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	-o-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+}
+.inset:before{
+	content: '';
+	width: 0;
+	height: 0;
+	border: 20px solid #FFF;
+	border-top: 0 solid rgba(0, 0, 0, 0)!important;
+	border-right: 13px solid rgba(0, 0, 0, 0)!important;
+	border-left: 13px solid rgba(0, 0, 0, 0);
+	left: 77.1%;
+	top: -5.3%;
+	position: absolute;
+}
+.form-login .login .inset form span {
+	display: block;
+	font-size: 1em;
+	color: #787878;
+	font-weight: 600;
+}
+.form-login .login .inset input[type="text"],.form-login .login .inset input[type="Password"] {
+	padding: 9px;
+	width: 90%;
+	font-size: 1.1em;
+	margin: 0px 0px 15px 0px;
+	border: 2px solid#EAEEF1;
+	color: #666666;
+	background:#EAEEF1;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:600;
+	outline:none;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.form-login .login .inset input[type="text"]:hover,.form-login .login .inset input[type="Password"]:hover,#active{
+	background:#fff;
+	border:2px solid #609EC3;
+	outline:none;
+}
+.sign {
+	padding: 10px 0;
+}
+.forget-pass {
+	float: right;
+}
+.submit {
+	padding: 2px 2px;
+	float:left;
+	margin-right: 11px;
+}
+.submit input[type="submit"] {
+	background: #F06B37;
+	border: none;
+	outline: none;
+	padding: 0.7em 1.3em;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+	font-size: 0.9em;
+	border-radius: 1.3em;
+	-webkit-border-radius: 1.3em;
+	-moz-border-radius: 1.3em;
+	-o-border-radius: 1.3em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	font-weight: 600;
+}
+.submit input[type="submit"]:hover{
+	background:#62A0C4;
+}
+.forget{
+	float:right;
+}
+.forget-pass a {
+	float: right;
+	color:#898888;
+	font-size: 0.95em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+.forget-pass a:hover {
+	text-decoration: underline;
+}
+
+/*----start-responsive design-----*/
+@media (max-width:1440px){
+	.user {
+		margin-right: 4.2em;
+	}
+	.inset:before {
+	left: 80%;
+	top: -5.3%;
+	}
+}
+@media (max-width:1366px){
+	.inset:before {
+		left: 80%;
+		top: -5%;
+	}
+}
+@media (max-width:1280px){
+	.user {
+	margin-right: 5.2em;
+	}
+	.inset:before {
+	left: 78.3%;
+	top: -5.4%;
+	}
+	.form-login .login .inset input[type="text"],.form-login .login .inset input[type="Password"] {
+	padding: 9px;
+	width: 93%;
+	}
+}
+@media (max-width:1024px){
+	.inset:before {
+		left: 77.2%;
+		top: -5.4%;
+	}
+}
+@media (max-width:768px){
+	.inset:before {
+	left: 75.3%;
+	top: -5.4%;
+	}
+}
+@media (max-width:640px){
+	.inset:before {
+	left: 74.2%;
+	top: -5.4%;
+	}
+}
+@media (max-width:480px){
+	.user {
+	margin-right: 4.2em;
+	}
+	.inset:before {
+	left: 74.2%;
+	top: -5.4%;
+	}
+}
+@media (max-width:320px){
+	.inset:before {
+	left: 67%;
+	top: -4.4%;
+	}	
+	.user {
+	margin-right: 4.2em;
+	}
+	.login {
+	padding: 1em 0;
+	}
+	.submit{
+	padding: 2px ;
+	text-align: center;
+	float:none;
+	}
+	.forget-pass {
+	float:none;
+	text-align:center;
+	margin-top: 15px
+	}
+	.forget-pass a {
+	float:none;
+	}
+	.form-login .login .inset input[type="text"],.form-login .login .inset input[type="Password"] {
+	padding: 6px;
+	margin: 9px 0px;
+	}
+	
+}

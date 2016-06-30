@@ -1,0 +1,33 @@
+ErrorDocument 400 /admin/404.php
+ErrorDocument 401 /admin/404.php
+ErrorDocument 402 /admin/404.php
+ErrorDocument 403 /admin/404.php
+ErrorDocument 404 /admin/404.php
+ErrorDocument 500 /admin/404.php
+
+php_value upload_max_filesize 2000M
+php_value post_max_size 2002M
+
+#Disable Directory Browsing
+Options All -Indexes 
+Options -Multiviews
+
+RewriteEngine On
+RewriteRule ^([^/.]+)$ $1.php [L]
+
+RewriteRule ^download/(.*)/$ ./d-load?noSoal=$1 [L,NC]
+
+RewriteRule ^show-post/(.*)/([0-9]+)/(.*)/(.*)/([0-9]+)/$ .?hal=show-post&order=$1&itemperpage=$2&searchCategory=$3&search=$4&page=$5 [L,NC]
+RewriteRule ^show-post/(.*)/([0-9]+)/(.*)/(.*)/$ .?hal=show-post&order=$1&itemperpage=$2&searchCategory=$3&search=$4 [L,NC]
+RewriteRule ^show-post/(.*)/([0-9]+)/([0-9]+)/$ .?hal=show-post&order=$1&itemperpage=$2&page=$3 [L,NC]
+RewriteRule ^show-post/(.*)/([0-9]+)/$ .?hal=show-post&order=$1&itemperpage=$2 [L,NC]
+
+RewriteRule ^messages/(.*)/([0-9]+)/$ .?hal=messages&order=$1&page=$2 [L,NC]
+RewriteRule ^messages/(.*)/$ .?hal=messages&order=$1 [L,NC]
+
+RewriteRule ^edit-post/(.*)/$ .?hal=edit-post&noSoal=$1 [L,NC]
+
+RewriteRule ^detail-post/(.*)/$ .?hal=detail-post&noSoal=$1 [L,NC]
+
+RewriteRule ^(.*)/$ .?hal=$1 [L,NC]
+

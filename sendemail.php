@@ -22,33 +22,32 @@
 
 
 
-    require_once "Mail.php";
-
-    $from = 'johangideon007@gmail.com';
-    $to = 'johan_gideon@yahoo.com';
-    $subject = 'Hi!';
-    $body = "Hi,\n\nHow are you?";
-
-    $headers = array(
-        'From' => $from,
-        'To' => $to,
-        'Subject' => $subject
-    );
-
-    $smtp = Mail::factory('smtp', array(
-            'host' => 'ssl://smtp.gmail.com',
-            'port' => '465',
-            'auth' => true,
-            'username' => 'johndoe@gmail.com',
-            'password' => 'passwordxxx'
-        ));
-
-    $mail = $smtp->send($to, $headers, $body);
-
-    if (PEAR::isError($mail)) {
-        echo('<p>' . $mail->getMessage() . '</p>');
+    include_once('assets/phpmailer/_lib/class.phpmailer.php');
+    $mail = new PHPMailer();
+    // kofigurasi SMTP GMAIL$mail->IsSMTP(); // memilih pengiriman dengan metode SMTP
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = "TLS";
+    $mail->Host = "smtp.mail.yahoo.com"; // SMTP server
+    $mail->Port = 465;
+    $mail->Username = "mytemp.web@yahoo.com";
+    $mail->Password = "tempjohan";
+    $mail->From = "suprot@mytempweb.tk";
+    $mail->FromName = "Kuda Lumping";
+    $mail->Subject = "Ngetes Email";
+    $body = "<h4>Hello Apa kabar</h4>";
+    $body .= "<br><p>Hanya sekedar test saja</p>";
+    // untuk mail klien yang tidak bisa baca format html
+    $text_body = "Hello Apa kabar";
+    $text_body .= "Hanya sekedar test saja";
+    $mail->Body = $body;
+    $mail->AltBody = $text_body;
+    $mail->AddAddress("johan_gideon@yahoo.com","Johan Gideon");
+    //attachment Foto
+    // $mail->AddStringAttachment("images/potomu.jpg");
+    if(!$mail->Send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
     } else {
-        echo('<p>Message successfully sent!</p>');
+    echo "Pesan Terkirim!";
     }
 
 

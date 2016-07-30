@@ -1255,8 +1255,8 @@ ul.faq li > div h3 {
   outline:none;
 }
 
-.condense_control { 
-  display:none; 
+.condense_control {
+  display:none;
 }
 
 .pointer{
@@ -1266,7 +1266,7 @@ ul.faq li > div h3 {
 
 .search-toggle{
   position: fixed;
-  background: #34495E; 
+  background: #34495E;
   padding: 3px;
   top: 100px;
   width:280px;

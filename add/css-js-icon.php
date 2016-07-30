@@ -4,10 +4,11 @@
 <link href="/css/animate.css" rel="stylesheet">
 <link href="/css/main.css" rel="stylesheet">
 <link href="/css/login.css" rel="stylesheet">
+<link href="/assets/datetimepicker/jquery.datetimepicker.css" rel="stylesheet"/>
 <!--[if lt IE 9]>
 <script src="js/html5shiv.js"></script>
 <script src="js/respond.min.js"></script>
-<![endif]-->     
+<![endif]-->
 <link rel="shortcut icon" href="/images/logo.ico">
 
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -16,3 +17,4 @@
 <script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 <script type="text/javascript" src="/js/jquery.condense.js"></script>
+<script type="text/javascript" src="/assets/datetimepicker/build/jquery.datetimepicker.full.js"></script>

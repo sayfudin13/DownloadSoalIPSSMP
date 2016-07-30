@@ -52,7 +52,7 @@ jQuery(function($) {
 		$('html, body').animate({
 			scrollTop: $("body").offset().top
 		}, 500);
-	});	
+	});
 
 	//scroll to how to get your own account
 	$('.gotonewaccount').click(function(event) {
@@ -60,16 +60,16 @@ jQuery(function($) {
 		$('html, body').animate({
 			scrollTop: $('#new-account').offset().top
 		}, 500);
-	});	
+	});
 
 	//move to how to get your own account
-	$('.coba-link').click(function(event) {           
+	$('.coba-link').click(function(event) {
 		// window.location.replace("/#new-account");
 		window.location.href = "/#new-account";
 	});
 
 	//feedbak page
-	$('#feedback').click(function(event) {           
+	$('#feedback').click(function(event) {
 		// window.location.replace("/feedback");
 		window.location.href = "/feedback";
 	});
@@ -105,67 +105,249 @@ jQuery(function($) {
 
 
 	//register
-	$('#register-username').on('focus input', function(){
-		$("#register-username").css("border", "1px solid #CCC");
+	// $('#register-username').on('focus input', function(){
+	// 	$("#register-username").css("border", "1px solid #CCC");
+	// 	$('#registererr0').html("");
+	// });
+	//
+	// $('#register-password').on('focus input', function(){
+	// 	$("#register-password").css("border", "1px solid #CCC");
+	// 	$('#registererr1').html("");
+	// });
+	//
+	// $('#register-repassword').on('focus input', function(){
+	// 	$("#register-repassword").css("border", "1px solid #CCC");
+	// 	$('#registererr2').html("");
+	// });
+	//
+	// $('#register-email').on('focus input', function(){
+	// 	$("#register-email").css("border", "1px solid #CCC");
+	// 	$('#registererr3').html("");
+	// });
+	//
+	// $("#register-button").click(function(){
+	// 	$.post('/reg/cek-register.php',{
+	// 		oldusername: $('#register-h').val(),
+	// 		username: $('#register-username').val(),
+	// 		password: $('#register-password').val(),
+	// 		repassword: $('#register-repassword').val(),
+	// 		email: $('#register-email').val()
+	// 	},function(result){
+	// 		var r = JSON.parse(result);
+	// 		if(r[0]!=0){
+	// 			$('#registererr0').html(r[0]);
+	// 			$("#register-username").css("border", "2px solid red");
+	// 		}
+	// 		if(r[1]!=0){
+	// 			$('#registererr1').html(r[1]);
+	// 			$("#register-password").css("border", "2px solid red");
+	// 		}
+	// 		if(r[2]!=0){
+	// 			$('#registererr2').html(r[2]);
+	// 			$("#register-repassword").css("border", "2px solid red");
+	// 		}
+	// 		if(r[3]!=0){
+	// 			$('#registererr3').html(r[3]);
+	// 			$("#register-email").css("border", "2px solid red");
+	// 		}
+	// 		if(r[0]==0 && r[1]==0 && r[2]==0 && r[3]==0){
+	// 			$.post('/reg/save-register.php',{
+	// 				oldusername: $('#register-h').val(),
+	// 				username: $('#register-username').val(),
+	// 				password: $('#register-password').val(),
+	// 				email: $('#register-email').val()
+	// 			},function(result){
+	// 				if(result == 1){
+	// 					window.location.replace("/reg/register_success");
+	// 				}
+	// 			})
+	// 		}
+	// 	});
+	// });
+
+	//end register
+
+	//form-registration
+	$('#register-provinsi').change(function(event) {
+		$.post('/indonesia/get-kota.php',{
+			provinsi: $(this).val()
+		},function(result) {
+			var inner = "<option value='0'>Pilih : </option>";
+			$('#register-kota').html(inner+result);
+			$('#register-kecamatan').html(inner);
+			$('#register-kelurahan').html(inner);
+		});
+	});
+
+	$('#register-kota').change(function(event) {
+		$.post('/indonesia/get-kecamatan.php',{
+			kota: $(this).val()
+		},function(result) {
+			var inner = "<option value='0'>Pilih : </option>";
+			$('#register-kecamatan').html(inner+result);
+			$('#register-kelurahan').html(inner);
+		});
+	});
+
+	$('#register-kecamatan').change(function(event) {
+		$.post('/indonesia/get-kelurahan.php',{
+			kecamatan: $(this).val()
+		},function(result) {
+			var inner = "<option value='0'>Pilih : </option>";
+			$('#register-kelurahan').html(inner+result);
+		});
+	});
+
+	$('#register-nama').on('focus input', function(){
+		$("#register-nama").css("border", "1px solid #CCC");
 		$('#registererr0').html("");
 	});
-	
-	$('#register-password').on('focus input', function(){
-		$("#register-password").css("border", "1px solid #CCC");
+
+	$('#register-gender').on('focus input', function(){
+		$("#register-gender").css("border", "1px solid #CCC");
 		$('#registererr1').html("");
 	});
 
-	$('#register-repassword').on('focus input', function(){
-		$("#register-repassword").css("border", "1px solid #CCC");
+	$('#register-tanggal-lahir').on('focus input', function(){
+		$("#register-tanggal-lahir").css("border", "1px solid #CCC");
 		$('#registererr2').html("");
+	});
+
+	$('#register-pendidikan').on('focus input', function(){
+		$("#register-pendidikan").css("border", "1px solid #CCC");
+		$('#registererr3').html("");
+	});
+
+	$('#register-provinsi').on('focus input', function(){
+		$("#register-provinsi").css("border", "1px solid #CCC");
+		$('#registererr4').html("");
+	});
+
+	$('#register-kota').on('focus input', function(){
+		$("#register-kota").css("border", "1px solid #CCC");
+		$('#registererr5').html("");
+	});
+
+	$('#register-kecamatan').on('focus input', function(){
+		$("#register-kecamatan").css("border", "1px solid #CCC");
+		$('#registererr6').html("");
+	});
+
+	$('#register-kelurahan').on('focus input', function(){
+		$("#register-kelurahan").css("border", "1px solid #CCC");
+		$('#registererr7').html("");
+	});
+
+	$('#register-alamat').on('focus input', function(){
+		$("#register-alamat").css("border", "1px solid #CCC");
+		$('#registererr8').html("");
 	});
 
 	$('#register-email').on('focus input', function(){
 		$("#register-email").css("border", "1px solid #CCC");
-		$('#registererr3').html("");
+		$('#registererr9').html("");
+	});
+
+	$('#register-username').on('focus input', function(){
+		$("#register-username").css("border", "1px solid #CCC");
+		$('#registererr10').html("");
+	});
+
+	$('#register-password').on('focus input', function(){
+		$("#register-password").css("border", "1px solid #CCC");
+		$('#registererr11').html("");
+	});
+
+	$('#register-repassword').on('focus input', function(){
+		$("#register-repassword").css("border", "1px solid #CCC");
+		$('#registererr12').html("");
 	});
 
 	$("#register-button").click(function(){
-		$.post('/reg/cek-register.php',{
-			oldusername: $('#register-h').val(),
+		$.post('/registrasi/cek-form-registrasi.php',{
+			nama: $('#register-nama').val(),
+			gender: $('#register-gender').val(),
+			bornday: $('#register-tanggal-lahir').val(),
+			pendidikan: $('#register-pendidikan').val(),
+			provinsi: $('#register-provinsi').val(),
+			kota: $('#register-kota').val(),
+			kecamatan: $('#register-kecamatan').val(),
+			kelurahan: $('#register-kelurahan').val(),
+			alamat: $('#register-alamat').val(),
+			email: $('#register-email').val(),
 			username: $('#register-username').val(),
 			password: $('#register-password').val(),
-			repassword: $('#register-repassword').val(),
-			email: $('#register-email').val()
+			repassword: $('#register-repassword').val()
 		},function(result){
 			var r = JSON.parse(result);
 			if(r[0]!=0){
 				$('#registererr0').html(r[0]);
-				$("#register-username").css("border", "2px solid red");
+				$("#register-nama").css("border", "2px solid red");
 			}
 			if(r[1]!=0){
 				$('#registererr1').html(r[1]);
-				$("#register-password").css("border", "2px solid red");
+				$("#register-gender").css("border", "2px solid red");
 			}
 			if(r[2]!=0){
 				$('#registererr2').html(r[2]);
-				$("#register-repassword").css("border", "2px solid red");
+				$("#register-tanggal-lahir").css("border", "2px solid red");
 			}
 			if(r[3]!=0){
 				$('#registererr3').html(r[3]);
+				$("#register-pendidikan").css("border", "2px solid red");
+			}
+			if(r[4]!=0){
+				$('#registererr4').html(r[4]);
+				$("#register-provinsi").css("border", "2px solid red");
+			}
+			if(r[5]!=0){
+				$('#registererr5').html(r[5]);
+				$("#register-kota").css("border", "2px solid red");
+			}
+			if(r[6]!=0){
+				$('#registererr6').html(r[6]);
+				$("#register-kecamatan").css("border", "2px solid red");
+			}
+			if(r[7]!=0){
+				$('#registererr7').html(r[7]);
+				$("#register-kelurahan").css("border", "2px solid red");
+			}
+			if(r[8]!=0){
+				$('#registererr8').html(r[8]);
+				$("#register-alamat").css("border", "2px solid red");
+			}
+			if(r[9]!=0){
+				$('#registererr9').html(r[9]);
 				$("#register-email").css("border", "2px solid red");
 			}
-			if(r[0]==0 && r[1]==0 && r[2]==0 && r[3]==0){
-				$.post('/reg/save-register.php',{
-					oldusername: $('#register-h').val(),
-					username: $('#register-username').val(),
-					password: $('#register-password').val(),
-					email: $('#register-email').val()
-				},function(result){
-					if(result == 1){
-						window.location.replace("/reg/register_success");
-					}
-				})
+			if(r[10]!=0){
+				$('#registererr10').html(r[10]);
+				$("#register-username").css("border", "2px solid red");
 			}
+			if(r[11]!=0){
+				$('#registererr11').html(r[11]);
+				$("#register-password").css("border", "2px solid red");
+			}
+			if(r[12]!=0){
+				$('#registererr12').html(r[12]);
+				$("#register-repassword").css("border", "2px solid red");
+			}
+			// if(r[0]==0 && r[1]==0 && r[2]==0 && r[3]==0){
+			// 	$.post('/reg/save-register.php',{
+			// 		oldusername: $('#register-h').val(),
+			// 		username: $('#register-username').val(),
+			// 		password: $('#register-password').val(),
+			// 		email: $('#register-email').val()
+			// 	},function(result){
+			// 		if(result == 1){
+			// 			window.location.replace("/reg/register_success");
+			// 		}
+			// 	})
+			// }
 		});
 	});
 
-	//end register
+	//end form-registration
 
 	// feedback
 	$('#isi-feedback').on('focus input', function(){
@@ -196,15 +378,15 @@ jQuery(function($) {
 	// feedback
 
 	$(document).ready(function(){
-		$('[data-toggle="tooltip"]').tooltip();   
+		$('[data-toggle="tooltip"]').tooltip();
 	});
 
 	//toggle search
     $( ".search-button" ).click(function() {
     	if ( $('.search-toggle').css("right") == '-230px' )
-        	$('.search-toggle').css({"right": "0px"}); 
+        	$('.search-toggle').css({"right": "0px"});
     	else
-        	$('.search-toggle').css({"right": "-230px"}); 
+        	$('.search-toggle').css({"right": "-230px"});
     });
 
 });

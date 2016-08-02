@@ -1,4 +1,5 @@
 <?php
+  include_once("db/config.inc.php");
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -206,8 +207,8 @@
 																	<h5>".$data_sample['nama']."</h5>
 																	<div class='overlay'>
 																	</div>
-																</div>    
-															</a>     
+																</div>
+															</a>
 														</li>
 									";
 								}
@@ -219,20 +220,20 @@
 
 							?>
 
-							
+
 						</div>
 					</div>
 				</div>
 			</div><!--/.row-->
 		</div>
 	</section><!--/#recent-works-->
-	
-	
 
-	<?php 
-	include('add/bottom.php'); 
+
+
+	<?php
+	include('add/bottom.php');
 	if(isset($_SESSION['username'])){
-		include ("modal/modal-change-password.php");	
+		include ("modal/modal-change-password.php");
 	}
 	?>
 

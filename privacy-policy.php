@@ -1,4 +1,5 @@
 <?php
+    include_once("db/config.inc.php");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -61,7 +62,7 @@
                 </div>
             </div>
         </div>
-    </section><!--/#title--> 
+    </section><!--/#title-->
 
     <section id="privacy-policy" class="container">
         <h1>Privacy Policy</h1>
@@ -123,10 +124,10 @@
         <p>If you have any questions about this Privacy Policy, please contact us.</p>
     </section><!--/#privacy-policy-->
 
-    <?php 
-    include('add/bottom.php'); 
+    <?php
+    include('add/bottom.php');
     if(isset($_SESSION['username'])){
-        include ("modal/modal-change-password.php");    
+        include ("modal/modal-change-password.php");
     }
     ?>
 </body>

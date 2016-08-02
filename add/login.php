@@ -17,8 +17,6 @@
 		}
 	}
 
-	include_once("db/config.inc.php");
-
 	if(isset($_COOKIE['username'])){
 		$_SESSION['username'] = $_COOKIE['username'];
 	}
@@ -27,7 +25,7 @@
 			$user = $_POST['username'];
 			$pwd = sha1($_POST['password']);
 
-			$query_user = mysqli_query($link,"SELECT * FROM data WHERE username = '$user' AND password = '$pwd'");
+			$query_user = mysqli_query($link,"SELECT * FROM data WHERE username = '$user' AND password = '$pwd' AND status = 1");
 			$data_user = mysqli_fetch_array($query_user);
 			$row_user = mysqli_num_rows($query_user);
 
@@ -45,7 +43,7 @@
 
 	if(!isset($_SESSION['username'])){
 		echo "
-			
+
 			<li class='dropdown ".liOpen()."'><a href='#' class='dropdown-toggle' data-toggle='dropdown'>Login <i class='icon-angle-down'></i></a>
 				<ul class='dropdown-menu dropdown-login'>
 					<li>
@@ -95,5 +93,5 @@
 				</ul>
 			</li>
 			";
-	}  
+	}
 ?>

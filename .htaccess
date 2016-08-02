@@ -6,8 +6,13 @@ ErrorDocument 404 /404.php
 ErrorDocument 500 /404.php
 
 #Disable Directory Browsing
-Options All -Indexes 
+Options All -Indexes
 Options -Multiviews
+
+<Files ~ "\.(DSISmail)$">
+   order allow,deny
+   deny from all
+</Files>
 
 RewriteEngine On
 RewriteRule ^([^/.]+)$ $1.php [L]
@@ -43,4 +48,3 @@ RewriteRule ^(.*)$ /$1.htm [L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ /$1.html [L]
-

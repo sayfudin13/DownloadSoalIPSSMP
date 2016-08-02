@@ -1,4 +1,5 @@
 <?php
+    include_once("db/config.inc.php");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -61,7 +62,7 @@
                 </div>
             </div>
         </div>
-    </section><!--/#title-->    
+    </section><!--/#title-->
 
     <section id="terms" class="container">
         <p class="paragraph">Ut commodo sapien erat, rutrum rhoncus metus interdum in. Curabitur eu felis mollis, sagittis nisi at, finibus ex. Aliquam hendrerit diam nisl, mollis euismod velit vestibulum facilisis. Morbi turpis neque, bibendum id diam nec, tincidunt dictum diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce nec dui in ex sodales porta. Aenean fringilla blandit varius.</p>
@@ -73,11 +74,11 @@
         <p class="paragraph">Aenean tincidunt, eros quis consequat volutpat, nulla diam tincidunt odio, et ultricies massa nibh et odio. Curabitur id tempor ipsum, at fringilla justo. Sed efficitur lectus orci, eu pulvinar lacus laoreet ut. Praesent convallis vitae justo vitae ultrices. Vivamus non lobortis erat. Praesent vitae turpis dolor. Morbi eu orci est. Curabitur porttitor, nunc a porta egestas, ex arcu condimentum mauris, quis dignissim diam magna vitae nibh. Vivamus vel neque eu nisl molestie eleifend nec quis est. Mauris bibendum varius viverra. Phasellus hendrerit, felis vitae mollis cursus, enim massa cursus metus, sit amet porta sem enim vitae ipsum. </p>
     </section><!--/#terms-->
 
-    
-    <?php 
-    include('add/bottom.php'); 
+
+    <?php
+    include('add/bottom.php');
     if(isset($_SESSION['username'])){
-        include ("modal/modal-change-password.php");    
+        include ("modal/modal-change-password.php");
     }
     ?>
 </body>

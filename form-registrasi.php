@@ -76,7 +76,7 @@
               <div class='form-group'>
                 <label class='col-sm-2 control-label'>Nama Lengkap <font color="darkred">*</font> :</label>
                 <div class='col-sm-10'>
-                  <input id="register-nama" type='text' class='form-control' placeholder='Nama Lengkap' name="nama" maxlength="20" value="">
+                  <input id="register-nama" type='text' class='form-control' placeholder='Nama Lengkap' name="nama" maxlength="225" value="">
                   <span class='err' id='registererr0'></span>
                   <i class="help-block">Isi nama lengkap Anda.</i>
                 </div>
@@ -114,7 +114,7 @@
                 <div class='col-sm-4'>
                   <select class="form-control" id="register-provinsi" name="provinsi">
                     <option value="0">Pilih : </option>
-                    
+
                     <?php
                       include_once("db/config.inc.php");
                       $query_provinces = mysqli_query($link,"SELECT * FROM provinces");
@@ -198,7 +198,7 @@
                   <i class="help-block">Masukkan kembali password anda.</i>
                 </div>
               </div>
-              
+
               <div class='form-group'>
                 <label class='col-sm-2 control-label'></label>
                 <div class='col-sm-10'>
@@ -212,11 +212,11 @@
     </div>
   </section>
 
-  
+
   <?php
-    include('add/bottom.php'); 
+    include('add/bottom.php');
     if(isset($_SESSION['username'])){
-      include ("modal/modal-change-password.php");    
+      include ("modal/modal-change-password.php");
     }
   ?>
   <script type="text/javascript">
@@ -231,6 +231,6 @@
   });
   $.datetimepicker.setLocale('id');
   </script>
-  
+
 </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+  include_once("db/config.inc.php");
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -94,7 +95,7 @@
 		";
 
 		?>
-	</section><!--/#title--> 
+	</section><!--/#title-->
 
 	<section id="portfolio" class="container">
 		<?php
@@ -131,7 +132,7 @@
 			} else {
 				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE status = '".$_GET['category']."' LIMIT $itemStart,$maxItemShownPerPage ");
 			}
-			
+
 
 			$text_item = "<ul class='portfolio-items col-4'>";
 			while($data_item = mysqli_fetch_array($query_item)){
@@ -143,8 +144,8 @@
 								<h5>".$data_item['nama']."</h5>
 								<div class='overlay'>
 								</div>
-							</div>    
-						</a>     
+							</div>
+						</a>
 					</li>
 				";
 			}
@@ -160,61 +161,61 @@
 			$totalitems = mysqli_num_rows($query_item);
 
 			echo getPaginationString($page,$totalitems,$maxItemShownPerPage,2,"/","?page=");
-			
-			function getPaginationString($page = 1, $totalitems, $limit = 15, $adjacents = 1, $targetpage = "/", $pagestring = "?page="){		
+
+			function getPaginationString($page = 1, $totalitems, $limit = 15, $adjacents = 1, $targetpage = "/", $pagestring = "?page="){
 				//defaults
 				if(!$adjacents) $adjacents = 1;
 				if(!$limit) $limit = 15;
 				if(!$page) $page = 1;
 				if(!$targetpage) $targetpage = "/";
-				
+
 				//other vars
 				$prev = $page - 1;									//previous page is page - 1
 				$next = $page + 1;									//next page is page + 1
 				$lastpage = ceil($totalitems / $limit);				//lastpage is = total items / items per page, rounded up.
 				$lpm1 = $lastpage - 1;								//last page minus 1
-				
-				/* 
-					Now we apply our rules and draw the pagination object. 
+
+				/*
+					Now we apply our rules and draw the pagination object.
 					We're actually saving the code to a variable in case we want to draw it more than once.
 				*/
 				$pagination = "";
 				if($lastpage > 1)
-				{	
+				{
 					$pagination .= "<ul class='pagination pagination-lg'>";
 
 					//previous button
-					if ($page > 1) 
+					if ($page > 1)
 						$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$prev."/'><i class='icon-angle-left'></i></a></li>";
 					else
-						$pagination .= "";	
-					
-					//pages	
+						$pagination .= "";
+
+					//pages
 					if ($lastpage < 7 + ($adjacents * 2))	//not enough pages to bother breaking it up
-					{	
+					{
 						for ($counter = 1; $counter <= $lastpage; $counter++)
 						{
 							if ($counter == $page)
 								$pagination .= "<li class='active'><a class='disabled' href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 							else
-								$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";					
+								$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 						}
 					}
 					elseif($lastpage >= 7 + ($adjacents * 2))	//enough pages to hide some
 					{
 						//close to beginning; only hide later pages
-						if($page < 1 + ($adjacents * 3))		
+						if($page < 1 + ($adjacents * 3))
 						{
 							for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++)
 							{
 								if ($counter == $page)
 									$pagination .= "<li class='active'><a class='disabled' href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 								else
-									$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";					
+									$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 							}
 							$pagination .= "<li><a class='disabled' href=''>...</a></li>";
 							$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$lpm1."/'>$lpm1</a></li>";
-							$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$lastpage."/'>$lastpage</a></li>";		
+							$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$lastpage."/'>$lastpage</a></li>";
 						}
 						//in middle; hide some front and some back
 						elseif($lastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2))
@@ -227,11 +228,11 @@
 								if ($counter == $page)
 									$pagination .= "<li class='active'><a class='disabled' href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 								else
-									$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";					
+									$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 							}
 							$pagination .= "<li><a class='disabled' href=''>...</a></li>";
 							$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$lpm1."/'>$lpm1</a></li>";
-							$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$lastpage."/'>$lastpage</a></li>";	
+							$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$lastpage."/'>$lastpage</a></li>";
 						}
 						//close to end; only hide early pages
 						else
@@ -244,19 +245,19 @@
 								if ($counter == $page)
 									$pagination .= "<li class='active'><a class='disabled' href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 								else
-									$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";					
+									$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$counter."/'>$counter</a></li>";
 							}
 						}
 					}
-					
+
 					//next button
-					if ($page < $counter - 1) 
+					if ($page < $counter - 1)
 						$pagination .= "<li><a href='/soal-dan-materi/".$_GET['category']."/".$next."/'><i class='icon-angle-right'></i></a></li>";
 					else
 						$pagination .= "";
 					$pagination .= "</ul>";
 				}
-				
+
 				return $pagination;
 			}
 
@@ -264,10 +265,10 @@
 
 	</section><!--/#portfolio-->
 
-	<?php 
-	include('add/bottom.php'); 
+	<?php
+	include('add/bottom.php');
 	if(isset($_SESSION['username'])){
-		include ("modal/modal-change-password.php");    
+		include ("modal/modal-change-password.php");
 	}
 	?>
 </body>

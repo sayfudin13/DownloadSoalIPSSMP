@@ -1,5 +1,6 @@
 <?php
-    session_start();
+  include_once("db/config.inc.php");
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,10 +56,10 @@
         <a class="btn btn-success" href="/">GO BACK TO THE HOMEPAGE</a>
     </section><!--/#error-->
 
-    <?php 
-    include('add/bottom.php'); 
+    <?php
+    include('add/bottom.php');
     if(isset($_SESSION['username'])){
-        include ("modal/modal-change-password.php");    
+        include ("modal/modal-change-password.php");
     }
     ?>
 </body>

@@ -1,4 +1,5 @@
 <?php
+    include_once("db/config.inc.php");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -61,7 +62,7 @@
                 </div>
             </div>
         </div>
-    </section><!--/#title-->    
+    </section><!--/#title-->
 
     <section id="terms" class="container">
         <h1>Terms and Conditions ("Terms")</h1>
@@ -79,7 +80,7 @@
 
         <p>You are responsible for safeguarding the password that you use to access the Service and for any activities or actions under your password, whether your password is with our Service or a third-party service.</p>
 
-        <p>You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>    
+        <p>You agree not to disclose your password to any third party. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
 
         <p><strong>Links To Other Web Sites</strong></p>
 
@@ -118,11 +119,11 @@
         <p>If you have any questions about these Terms, please contact us.</p>
     </section><!--/#terms-->
 
-    
-    <?php 
-    include('add/bottom.php'); 
+
+    <?php
+    include('add/bottom.php');
     if(isset($_SESSION['username'])){
-        include ("modal/modal-change-password.php");    
+        include ("modal/modal-change-password.php");
     }
     ?>
 </body>

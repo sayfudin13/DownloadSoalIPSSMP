@@ -1,4 +1,5 @@
 <?php
+    include_once("db/config.inc.php");
     session_start();
 ?>
 <!DOCTYPE html>
@@ -97,18 +98,17 @@
     </section><!--/#title-->
 
     <section id="blog" class="container">
-        <div class="row">        
+        <div class="row">
             <div class="col-sm-12">
                 <div class="blog">
                     <div class="blog-item">
                         <?php
-                            include_once("db/config.inc.php");
                             $query_soal = mysqli_query($link, "SELECT * FROM soal WHERE no = '".$_GET['noSoal']."'");
                             $row = mysqli_num_rows($query_soal);
                             $data_soal = mysqli_fetch_array($query_soal);
                             if($row == 1){
-                                
-                                $date = new DateTime($data_soal['tanggal']); 
+
+                                $date = new DateTime($data_soal['tanggal']);
 
                                 $tags = explode(',', $data_soal['tags']);
                                 echo "
@@ -122,10 +122,10 @@
                                     </div>
                                     <div class='blog-description col-lg-12'>
                                         <div class='col-sm-4'>
-                                            <img class='img-responsive blog-img' src='".$data_soal['alamat_gambar']."' width='100%' alt='".$data_soal['nama']."' />    
+                                            <img class='img-responsive blog-img' src='".$data_soal['alamat_gambar']."' width='100%' alt='".$data_soal['nama']."' />
                                         </div>
                                         ".$data_soal['deskripsi'];
-                                
+
                                 if(isset($_SESSION['username']) || $data_soal['status'] == 'sample'){
                                     echo "
                                         Download source : <a class='err' href='/download/".sha1($data_soal['no'])."/'>".after_last('/',$data_soal['alamat_file'])."</a>
@@ -141,10 +141,10 @@
                                     <div class='blog-content col-md-12 col-sm-12'>
                                         <hr>
                                         <div class='tags'>
-                                            <i class='icon-tags'></i> Tags 
+                                            <i class='icon-tags'></i> Tags
                                 ";
-                                
-                                for ($i=0; $i < count($tags); $i++) { 
+
+                                for ($i=0; $i < count($tags); $i++) {
                                     if(!empty($tags[$i])){
                                         echo "
                                             <a href='/search/".$tags[$i]."/1/' class='btn btn-xs btn-primary'>".$tags[$i]."</a>
@@ -156,7 +156,7 @@
                                         </div>
                                 ";
 
-                                
+
                             }
 
                             function after ($this, $inthat)
@@ -204,8 +204,8 @@
         </div><!--/.row-->
     </section><!--/#blog-->
 
-    <?php 
-    include('add/bottom.php'); 
+    <?php
+    include('add/bottom.php');
     if(isset($_SESSION['username'])){
         include ("modal/modal-change-password.php");
     } else {

@@ -69,7 +69,7 @@
 												<input type='submit' value='LOGIN' name='login'>
 											</div>
 											<span class='forget-pass'>
-												<a href='#'>Forgot Password?</a><br>
+												<a href='/forget-password'>Forgot Password?</a><br>
 												<a href='/how-to-get-your-account'>not have an account?</a>
 											</span>
 											<div class='clear'> </div>

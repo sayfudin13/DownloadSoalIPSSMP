@@ -385,16 +385,97 @@ jQuery(function($) {
 	});
 	// feedback
 
+	// forget-password
+
+	$('#forget-password-email').on('focus input', function(){
+		$("#forget-password-email").css("border", "1px solid #CCC");
+		$('#forgetpasserr0').html("");
+	});
+
+	$("#forget-password-button").click(function(event) {
+		$.post('/forget-password/cek-email', {
+			email: $("#forget-password-email").val()
+		}, function(result) {
+			var r = JSON.parse(result);
+			if (r[0] != 0) {
+				$('#forgetpasserr0').html(r[0]);
+				$("#forget-password-email").css("border", "2px solid red");
+			}
+			if (r[0] == 0) {
+				$.post('/forget-password/reset-password',{
+					email: $("#forget-password-email").val()
+				}, function(result) {
+					var email = $("#forget-password-email").val();
+					window.location.href = "/forget-password/sent?e="+email;
+				});
+			}
+		});
+	});
+
+	$("#reset-password-resend-button").click(function(event) {
+		$.post('/forget-password/reset-password',{
+			email: $("#reset-password-resend-email").val()
+		}, function(result) {
+			var alert = '<div class="alert alert-success fade in" style="position: relative; left: -50%;"><button type="button" class="close" data-dismiss="alert">&times;</button>The mail has been sent.</div>';
+			var notification = $("#notification").html();
+			$("#notification").html(notification+alert);
+		});
+	});
+
+	//reset
+	$('#reset-newpwd').on('focus input', function(){
+		$("#reset-newpwd").css("border", "1px solid #CCC");
+		$('#reseterr0').html("");
+	});
+
+	$('#reset-renewpwd').on('focus input', function(){
+		$("#reset-renewpwd").css("border", "1px solid #CCC");
+		$('#reseterr1').html("");
+	});
+
+	$("#reset-button").click(function(event) {
+
+		$.post('/forget-password/cek-reset', {
+			newpwd: $("#reset-newpwd").val(),
+			renewpwd: $("#reset-renewpwd").val()
+		}, function(result) {
+			var r = JSON.parse(result);
+			if (r[0] != 0) {
+				$('#reseterr0').html(r[0]);
+				$("#reset-newpwd").css("border", "2px solid red");
+			}
+			if (r[1] != 0) {
+				$('#reseterr1').html(r[1]);
+				$("#reset-renewpwd").css("border", "2px solid red");
+			}
+			if (r[0] == 0 && r[1] == 0) {
+				$.post('/forget-password/save-reset', {
+					username: $("#reset-username").val(),
+					changepass: $("#reset-key").val(),
+					newpwd: $("#reset-newpwd").val()
+				}, function(result) {
+					if (result == 1) {
+						window.location.href = "/forget-password/success";
+					} else if (result == -1) {
+						window.location.href = "/404";
+					}
+				});
+			}
+		});
+	});
+
+	// end forget-password
+
 	$(document).ready(function(){
 		$('[data-toggle="tooltip"]').tooltip();
 	});
 
 	//toggle search
-    $( ".search-button" ).click(function() {
-    	if ( $('.search-toggle').css("right") == '-230px' )
-        	$('.search-toggle').css({"right": "0px"});
-    	else
-        	$('.search-toggle').css({"right": "-230px"});
-    });
+	$( ".search-button" ).click(function() {
+		if ( $('.search-toggle').css("right") == '-230px' )
+		$('.search-toggle').css({"right": "0px"});
+		else
+		$('.search-toggle').css({"right": "-230px"});
+	});
 
 });

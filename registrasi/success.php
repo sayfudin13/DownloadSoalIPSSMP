@@ -1,6 +1,15 @@
 <?php
-	include_once("../db/config.inc.php");
-	session_start();
+	if (!isset($_GET['e'])) {
+		include '../404.php';
+	} else {
+		include '../db/config.inc.php';
+		$email = $_GET['e'];
+		$query = mysqli_query($link, "SELECT * FROM data where email = '$email' and status = 0");
+		$row = mysqli_num_rows($query);
+		if($row != 1){
+			include '../404.php';
+		} else {
+			session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +22,7 @@
 	<?php include('../add/css-js-icon.php'); ?>
 </head><!--/head-->
 <body>
+	<input id="registrasi-email" type="hidden" name="name" value="<?=$email?>">
 	<header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
 		<div class="container">
 			<div class="navbar-header">
@@ -47,12 +57,23 @@
 		</div>
 	</header><!--/header-->
 
+	<div id="notification" style="max-width:400px;min-width:300px;position:absolute;left:50%;margin-top:20px">
+  </div>
+
 	<section id="error" class="container">
 		<h1>Register Success</h1>
-		<p>Anda akan menerima email pemberitahuan selanjutnya untuk mengaktifkan akun Anda.<br>Jika Anda tidak menerima email silahkan klik tombol dibawah atau cek folder spam Anda.</p>
-		<a class="btn btn-success" href="/">Kirim ulang</a>
+		<p>Anda akan menerima email pemberitahuan selanjutnya untuk mengaktifkan akun Anda.<br>Jika Anda tidak menerima email silahkan cek folder spam Anda atau klik tombol dibawah untuk mengirim ulang.</p>
+		<button id="registrasi-resend-button" type="button" name="button" class="btn btn-info">Kirim ulang</button>
+    <p></p>
+		<a class="btn btn-success" href="/">CLICK HERE TO BACK TO HOMEPAGE</a>
 	</section><!--/#error-->
 
 	<?php include('../add/bottom.php'); ?>
 </body>
 </html>
+
+<?php
+	}
+}
+
+?>

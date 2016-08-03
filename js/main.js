@@ -348,10 +348,27 @@ jQuery(function($) {
 					password: $('#register-password').val()
 				},function(result){
 					if(result == 1){
-						window.location.replace("/registrasi/registrasi-success.php");
+						$.post('/registrasi/registrasi-mail', {
+							email: $('#register-email').val()
+						}, function(result) {
+							if (result == 1) {
+								var email = $('#register-email').val();
+								window.location.replace("/registrasi/success?e="+email);
+							}
+						});
 					}
 				})
 			}
+		});
+	});
+
+	$("#registrasi-resend-button").click(function(event) {
+		$.post('/registrasi/registrasi-mail',{
+			email: $("#registrasi-email").val()
+		}, function(result) {
+			var alert = '<div class="alert alert-success fade in" style="position: relative; left: -50%;"><button type="button" class="close" data-dismiss="alert">&times;</button>The mail has been sent.</div>';
+			var notification = $("#notification").html();
+			$("#notification").html(notification+alert);
 		});
 	});
 

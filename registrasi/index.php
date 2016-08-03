@@ -1,4 +1,5 @@
 <?php
+  include("../db/config.inc.php");
   session_start();
 ?>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Form Regristrasi | Download Soal IPS SMP</title>
-  <?php include('add/css-js-icon.php'); ?>
+  <?php include('../add/css-js-icon.php'); ?>
 </head><!--/head-->
 <body>
   <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
@@ -40,7 +41,7 @@
             </ul>
           </li>
           <li><a href="#">Daftar Pustaka</a></li>
-          <?php include('add/login.php'); ?>
+          <?php include('../add/login.php'); ?>
         </ul>
       </div>
     </div>
@@ -116,7 +117,6 @@
                     <option value="0">Pilih : </option>
 
                     <?php
-                      include_once("db/config.inc.php");
                       $query_provinces = mysqli_query($link,"SELECT * FROM provinces");
                       while ($data_provinces = mysqli_fetch_array($query_provinces)) {
                         echo "<option value='".$data_provinces['id']."'>".$data_provinces['name']." </option>";
@@ -214,9 +214,9 @@
 
 
   <?php
-    include('add/bottom.php');
+    include('../add/bottom.php');
     if(isset($_SESSION['username'])){
-      include ("modal/modal-change-password.php");
+      include ("../modal/modal-change-password.php");
     }
   ?>
   <script type="text/javascript">

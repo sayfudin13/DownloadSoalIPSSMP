@@ -13,7 +13,7 @@ $username = $_POST['username'];
 $password = sha1($_POST['password']);
 $email = $_POST['email'];
 
-$q = "INSERT INTO `data` VALUES ('$username', '$password', '$email', '$nama', '$gender', '$bornday', '$pendidikan', '$provinsi', '$kota', '$kecamatan', '$kelurahan', '$alamat', 0)";
+$q = "INSERT INTO `data` VALUES ('$username', '$password', '$email', '$nama', '$gender', '$bornday', '$pendidikan', '$provinsi', '$kota', '$kecamatan', '$kelurahan', '$alamat', 0, 'none')";
 $res = mysqli_query($link,$q);
 echo $res;
 ?>

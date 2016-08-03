@@ -69,8 +69,8 @@
 												<input type='submit' value='LOGIN' name='login'>
 											</div>
 											<span class='forget-pass'>
-												<a href='/forget-password'>Forgot Password?</a><br>
-												<a href='/how-to-get-your-account'>not have an account?</a>
+												<a href='/forget-password'>Lupa password?</a><br>
+												<a href='/cara-mendapatkan-akun'>Tidak punya akun?</a>
 											</span>
 											<div class='clear'> </div>
 										</div>
@@ -81,6 +81,9 @@
 						</div>
 					</li>
 				</ul>
+			</li>
+			<li>
+				<a href='/registrasi' style='color:#FFF;background-color:#ED872D'><strong>Daftar</strong></a>
 			</li>";
 	}
 	else

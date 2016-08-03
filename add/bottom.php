@@ -1,21 +1,18 @@
 <section id="bottom" class="wet-asphalt">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-4">
                 <h4>Contact Info</h4>
                 <div>
                     <ul class="unstyled">
-                        <li><i class="icon-mobile-phone"></i> Mobile : 089843242342</li>
-                        <li><i class="icon-comment"></i> WhatsApp : 089843242342</li>
-                        <li><i class="icon-phone"></i> Phone : (022) - 4854473</li>
-                        <li><i class="icon-facebook" ></i> Facebook : <a href="https://www.facebook.com/JohanGideon" target="_blank">Johan Gideon</a></li>
-                        <li><i class="icon-linkedin"></i> LinkedIn : <a href="https://www.linkedin.com/in/johan-gideon-b74a26105" target="_blank">Johan Gideon</a></li>
-                        <li><i class="icon-envelope"></i> Email : asem_manis@yahoo.com</li>
+                        <li><i class="icon-user"></i> Name : Hendry Suhardiman</li>
+                        <li><i class="icon-map-marker"></i> Address : Margahayu, Bandung</li>
+                        <li><i class="icon-credit-card"></i> BCA : 2797006960</li>
                     </ul>
                 </div>
             </div> <!--/.col-md-3-->
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-4">
                 <h4>Soal dan Meteri</h4>
                 <div>
                     <ul class="arrow">
@@ -30,17 +27,11 @@
                 </div>
             </div><!--/.col-md-3-->
 
-            <div class="col-md-3 col-sm-6">
-                <h4>About This Web</h4>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
-                <p>Pellentesque habitant morbi tristique senectus.</p>
-            </div><!--/.col-md-3-->
-
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-4">
                 <h4>Terms and Privacy</h4>
                 <div>
                     <ul class="arrow">
-                        <li><a href="/how-to-get-your-account">How To Get Your Account</a></li>
+                        <li><a href="/cara-mendapatkan-akun" style="color:#84DE02">Cara mendapatkan akun</a></li>
                         <li><a href="/privacy-policy">Privacy Policy</a></li>
                         <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
                         <li><a href="/terms-of-service">Terms of Service</a></li>
@@ -56,10 +47,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-sm-6">
-                <a href="/">DownloadSoalIPSSMP<span style="color:orange;">.com</span></a> &copy; 2016. All Rights Reserved. 
+                <a href="/">DownloadSoalIPSSMP<span style="color:orange;">.com</span></a> &copy; 2016. All Rights Reserved.
             </div>
             <div class="col-md-2 col-sm-6">
-                <a id="gototop" class="gototop pull-right" href="#">Go to top &nbsp<i class="icon-chevron-up"></i></a><!--#gototop-->    
+                <a id="gototop" class="gototop pull-right" href="#">Go to top &nbsp<i class="icon-chevron-up"></i></a><!--#gototop-->
             </div>
         </div>
     </div>

@@ -332,18 +332,26 @@ jQuery(function($) {
 				$('#registererr12').html(r[12]);
 				$("#register-repassword").css("border", "2px solid red");
 			}
-			// if(r[0]==0 && r[1]==0 && r[2]==0 && r[3]==0){
-			// 	$.post('/reg/save-register.php',{
-			// 		oldusername: $('#register-h').val(),
-			// 		username: $('#register-username').val(),
-			// 		password: $('#register-password').val(),
-			// 		email: $('#register-email').val()
-			// 	},function(result){
-			// 		if(result == 1){
-			// 			window.location.replace("/reg/register_success");
-			// 		}
-			// 	})
-			// }
+			if(r[0]==0 && r[1]==0 && r[2]==0 && r[3]==0 && r[4]==0 && r[5]==0 && r[6]==0 && r[7]==0 && r[8]==0 && r[9]==0 && r[10]==0 && r[11]==0 && r[12]==0){
+				$.post('/registrasi/save-registrasi-form.php',{
+					nama: $('#register-nama').val(),
+					gender: $('#register-gender').val(),
+					bornday: $('#register-tanggal-lahir').val(),
+					pendidikan: $('#register-pendidikan').val(),
+					provinsi: $('#register-provinsi').val(),
+					kota: $('#register-kota').val(),
+					kecamatan: $('#register-kecamatan').val(),
+					kelurahan: $('#register-kelurahan').val(),
+					alamat: $('#register-alamat').val(),
+					email: $('#register-email').val(),
+					username: $('#register-username').val(),
+					password: $('#register-password').val()
+				},function(result){
+					if(result == 1){
+						window.location.replace("/registrasi/registrasi-success.php");
+					}
+				})
+			}
 		});
 	});
 

@@ -42,7 +42,7 @@
 						</ul>
 					</li>
 					<li><a href="#">Daftar Pustaka</a></li>
-          <?php include('add/login.php'); ?>
+          <?php include('../add/login.php'); ?>
 				</ul>
 			</div>
 		</div>

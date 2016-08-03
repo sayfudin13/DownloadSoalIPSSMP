@@ -28,7 +28,7 @@ if ($row == 1) {
   $mail->FromName = "MyTempWeb";
   $mail->AddReplyTo('support@tempweb.tk', 'Support MyTempWeb');
   $mail->Subject = "Permintaan Registrasi";
-  $body = file_get_contents('./reset-password.DSISmail');
+  $body = file_get_contents('./reset-password-html.DSISmail');
   // untuk mail klien yang tidak bisa baca format html
   $text_body = file_get_contents('./reset-password-text.DSISmail');
 

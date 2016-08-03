@@ -5,9 +5,11 @@ $feedback = $_POST['feedback'];
 $Err[0]=0;
 
 if(empty($feedback)){
-	$Err[0]="This field cannot be empty!";
+	$Err[0]="Tidak boleh kosong!";
 } else if(strlen($feedback) > 1000){
-	$Err[0]="Username must be less than 1000 characters!";
+	$Err[0]="Tidak boleh lebih dari 1000 karakter!";
+} else if (strlen(trim($feedback)) == 0){
+  $Err[0]="Tidak boleh hanya spasi!";
 }
 	echo json_encode($Err);
 ?>

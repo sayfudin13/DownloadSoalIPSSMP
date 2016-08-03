@@ -9,23 +9,25 @@ $renewpwd = $_POST['renewpwd'];
 $Err=array(0,0,0);
 
 if(empty($oldpwq)){
-	$Err[0]="This field cannot be empty";
+	$Err[0]="Tidak boleh kosong!";
 }else if(sha1($oldpwq)!=$data['password']){
-	$Err[0]="Password is incorrect!";
+	$Err[0]="Password tidak sesuai!";
 }
 
 if (empty($newpwd)) {
-	$Err[1]="This field cannot be empty!";
+	$Err[1]="Tidak boleh kosong!";
 } else if (strlen($newpwd) < 6) {
-	$Err[1]="Password must be higher than 6 characters!";
+	$Err[1]="Harus lebih dari 6 karakter!";
+} else if (strlen(trim($newpwd)) == 0){
+  $Err[1]="Tidak boleh hanya spasi!";
 } else if (!preg_match('/^[a-zA-Z0-9]+$/', $newpwd)) {
-	$Err[1]="Special characters are not allowed!";
+	$Err[1]="Tidak boleh ada karakter spesial!";
 }
 
 if (empty($renewpwd)) {
-  $Err[2]="This field cannot be empty";
+  $Err[2]="Tidak boleh kosong";
 }else if ($renewpwd != $newpwd){
-	$Err[2]="Password doesn't match";
+	$Err[2]="Password tidak sesuai";
 }
 
 	echo json_encode($Err);

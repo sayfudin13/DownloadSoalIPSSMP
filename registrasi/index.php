@@ -40,7 +40,7 @@
               <li><a href='/soal-dan-materi/sample/1/' >Free Sample</a></li>
             </ul>
           </li>
-          <li><a href="#">Daftar Pustaka</a></li>
+          <li><a href="/daftar-pustaka">Daftar Pustaka</a></li>
           <?php include('../add/login.php'); ?>
         </ul>
       </div>

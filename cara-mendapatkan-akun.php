@@ -9,7 +9,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>How To Get Your Account | Download Soal IPS SMP</title>
+  <title>Cara Mendapatkan Akun | Download Soal IPS SMP</title>
   <?php include('add/css-js-icon.php'); ?>
 </head><!--/head-->
 <body>

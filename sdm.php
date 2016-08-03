@@ -67,7 +67,7 @@
 						?>
 						</ul>
 					</li>
-					<li><a href="#">Daftar Pustaka</a></li>
+					<li><a href="/daftar-pustaka">Daftar Pustaka</a></li>
 					<?php include('add/login.php'); ?>
 				</ul>
 			</div>

@@ -21,7 +21,7 @@ $Err=array(0,0,0,0,0,0,0,0,0,0,0,0,0);
 
 if(empty($nama)){
   $Err[0]="Tidak boleh kosong!";
-} else if(strlen($nama) > 50){
+} else if(strlen($nama) > 255){
   $Err[0]="Nama terlalu panjang!";
 } else if (strlen(trim($nama)) == 0){
   $Err[0]="Tidak boleh hanya spasi!";
@@ -47,7 +47,7 @@ if(empty($bornday)){
 
 if(empty($pendidikan)){
   $Err[3]="Tidak boleh kosong!";
-} else if(strlen($pendidikan) > 100){
+} else if(strlen($pendidikan) > 225){
   $Err[3]="Pendidikan terlalu panjang!";
 } else if (strlen(trim($pendidikan)) == 0){
   $Err[3]="Tidak boleh hanya spasi!";

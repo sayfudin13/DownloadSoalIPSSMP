@@ -52,7 +52,7 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<h1>Feedback</h1>
-					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+					<p>Sampaikan kritik, saran, dan request Anda kepada kami</p>
 				</div>
 				<div class="col-sm-6">
 					<ul class="breadcrumb pull-right">

@@ -65,7 +65,7 @@
 								<div class="carousel-content centered">
 									<h2 class="boxed animation animated-item-1">SOAL DAN MATERI KELAS 7</h2>
 									<br>
-									<p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+									<p class="boxed animation animated-item-2">ATMOSFIR, DISTRIBUSI, ILMU SOSIAL, KERAJAAN HINDU BUDHA, KONDISI GEOGRAFIS, MANUSIA PURBA DI INDONESIA, dll.</p>
 									<br>
 									<a class="btn btn-md animation animated-item-3" href="/soal-dan-materi/kelas-7/1/">Lihat Soal</a>
 								</div>
@@ -80,7 +80,7 @@
 								<div class="carousel-content centered">
 									<h2 class="boxed animation animated-item-1">SOAL DAN MATERI KELAS 8</h2>
 									<br>
-									<p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+									<p class="boxed animation animated-item-2">FLORA DAN FAUNA DI INDONESIA, HUBUNGAN SOSIAL, KEBANGKITAN NASIONAL, PEMANFAATAN SUMBER DAYA, PERANG DUNIA, dll.</p>
 									<br>
 									<a class="btn btn-md animation animated-item-3" href="/soal-dan-materi/kelas-8/1/">Lihat Soal</a>
 								</div>
@@ -95,7 +95,7 @@
 								<div class="carousel-content centered">
 									<h2 class="boxed animation animated-item-1">SOAL DAN MATERI KELAS 9</h2>
 									<br>
-									<p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
+									<p class="boxed animation animated-item-2">ASIA TENGGARA, MASA PENDUDUKAN JEPANG, POLA OBJEK GEOGRAFI  SUNGAI, UANG DAN LEMBAGA KEUANGAN, NEGARA BERKEMBANG DAN MAJU DI DUNIA, dll.</p>
 									<br>
 									<a class="btn btn-md animation animated-item-3" href="/soal-dan-materi/kelas-9/1/">Learn More</a>
 								</div>
@@ -110,7 +110,7 @@
 								<div class="carousel-content centered">
 									<h2 class="boxed animation animated-item-1">OLIMPIADE SISWA NASIONAL</h2>
 									<br>
-									<p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+									<p class="boxed animation animated-item-2">2010, 2011, 2012, 2013, 2014, dan 2015.</p>
 									<br>
 									<a class="btn btn-md animation animated-item-3" href="/soal-dan-materi/osn/1/">Lihat Soal</a>
 								</div>
@@ -125,7 +125,7 @@
 								<div class="carousel-content centered">
 									<h2 class="boxed animation animated-item-1">SILABUS - RPP</h2>
 									<br>
-									<p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+									<p class="boxed animation animated-item-2">Silabus dan RPP 2013 Semester 1 dan 2.</p>
 									<br>
 									<a class="btn btn-md animation animated-item-3" href="/soal-dan-materi/silabus-rpp/1/">Lihat Soal</a>
 								</div>
@@ -140,7 +140,7 @@
 								<div class="carousel-content centered">
 									<h2 class="boxed animation animated-item-1">POWER POINT FILE</h2>
 									<br>
-									<p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
+									<p class="boxed animation animated-item-2">Materi Power Point Kelas VII - IX</p>
 									<br>
 									<a class="btn btn-md animation animated-item-3" href="/soal-dan-materi/ppt/1/">Learn More</a>
 								</div>

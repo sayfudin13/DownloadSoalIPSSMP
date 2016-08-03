@@ -25,7 +25,7 @@ if ($row == 1) {
   $mail->From = "noreply@mytempweb.tk";
   $mail->FromName = "MyTempWeb";
   $mail->AddReplyTo('support@tempweb.tk', 'Support MyTempWeb');
-  $mail->Subject = "Aktifkan Akun Anda";
+  $mail->Subject = "Pendaftaran Akun";
   $body = file_get_contents('./registrasi-mail-html.DSISmail');
   // untuk mail klien yang tidak bisa baca format html
   $text_body = file_get_contents('./registrasi-mail-text.DSISmail');

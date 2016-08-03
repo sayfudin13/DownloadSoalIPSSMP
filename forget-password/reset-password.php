@@ -26,7 +26,6 @@ if ($row == 1) {
   $mail->Password = "tempjohan";
   $mail->From = "noreply@mytempweb.tk";
   $mail->FromName = "MyTempWeb";
-  $mail->AddReplyTo('support@tempweb.tk', 'Support MyTempWeb');
   $mail->Subject = "Permintaan Ubah Password";
   $body = file_get_contents('./reset-password-html.DSISmail');
   // untuk mail klien yang tidak bisa baca format html

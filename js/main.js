@@ -422,8 +422,12 @@ jQuery(function($) {
 				$.post('/forget-password/reset-password',{
 					email: $("#forget-password-email").val()
 				}, function(result) {
-					var email = $("#forget-password-email").val();
-					window.location.href = "/forget-password/sent?e="+email;
+					if (result == 1) {
+						var email = $("#forget-password-email").val();
+						window.location.href = "/forget-password/sent?e="+email;
+					} else {
+						window.location.href = "/zona-nonaktif";
+					}
 				});
 			}
 		});

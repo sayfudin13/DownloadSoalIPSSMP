@@ -25,14 +25,19 @@
 			$user = $_POST['username'];
 			$pwd = sha1($_POST['password']);
 
-			$query_user = mysqli_query($link,"SELECT * FROM data WHERE username = '$user' AND password = '$pwd' AND status = 1");
+			$query_user = mysqli_query($link,"SELECT * FROM data WHERE username = '$user' AND password = '$pwd'");
 			$data_user = mysqli_fetch_array($query_user);
 			$row_user = mysqli_num_rows($query_user);
 
 			if($row_user == 1){
-				$_SESSION['username'] = $data_user['username'];
-				if(isset($_POST['remember'])){
-					setcookie("username",$data_user['username'],time()+(86400 * 7),"","",0);
+				if ($data_user['status'] == 0) {
+					header('Location: http://'.$_SERVER['HTTP_HOST'].'/zona-nonaktif', true, 303);
+					die();
+				} else {
+					$_SESSION['username'] = $data_user['username'];
+					if(isset($_POST['remember'])){
+						setcookie("username",$data_user['username'],time()+(86400 * 7),"","",0);
+					}
 				}
 			}
 			else{

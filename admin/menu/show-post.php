@@ -19,7 +19,7 @@
 					<header class="panel-heading">
 					 Show Post
 					</header>
-					<div class="panel-body">	
+					<div class="panel-body">
 						<div class="form-horizontal form">
 							<div class="form-group">
 								<div class="col-sm-3">
@@ -102,9 +102,9 @@
 											} else {
 												$request_URI[3] = "$key asc";
 											}
-											for ($i=0; $i < count($request_URI)-1; $i++) { 
+											for ($i=0; $i < count($request_URI)-1; $i++) {
 												$order[$key] = $order[$key].$request_URI[$i]."/";
-												
+
 											};
 										}
 									?>
@@ -116,11 +116,11 @@
 										<th class="col-md-2">Tanggal<span class='pull-right'><a href="<?php echo "http://$_SERVER[HTTP_HOST]".$order['tanggal']; ?>" title="Sort by Tanggal"><i class='fa fa-sort<?php echo sortedAscOrDesc('tanggal'); ?>'></i></a></span></th>
 										<th class="col-md-2">Action</th>
 									</tr>
-								</thead>	
+								</thead>
 								<tbody>
-								<?php 
+								<?php
 									include_once("../db/config.inc.php");
-									
+
 									$maxItemShownPerPage = $_GET['itemperpage'];
 									$maxPageNumberShownPerPage = 5;
 									$halfOfMaxPageNumberShownPerPage = floor($maxPageNumberShownPerPage/2);
@@ -135,7 +135,7 @@
 
 									$query_item = mysqli_query($link,$qry);
 									while ($data_item = mysqli_fetch_array($query_item)) {
-										$date = new DateTime($data_item['tanggal']); 
+										$date = new DateTime($data_item['tanggal']);
 										echo "
 											<tr>
 												<td>".$data_item['no']."</td>
@@ -171,106 +171,106 @@
 
 						  		//function to return the pagination string
 						  		function getPaginationString($page = 1, $totalitems, $limit = 15, $adjacents = 1, $targetpage = "/", $pagestring = "?page=")
-						  		{		
+						  		{
 						  			//defaults
 						  			if(!$adjacents) $adjacents = 1;
 						  			if(!$limit) $limit = 15;
 						  			if(!$page) $page = 1;
 						  			if(!$targetpage) $targetpage = "/";
-						  			
+
 						  			//other vars
 						  			$prev = $page - 1;									//previous page is page - 1
 						  			$next = $page + 1;									//next page is page + 1
 						  			$lastpage = ceil($totalitems / $limit);				//lastpage is = total items / items per page, rounded up.
 						  			$lpm1 = $lastpage - 1;								//last page minus 1
-						  			
-						  			/* 
-						  				Now we apply our rules and draw the pagination object. 
+
+						  			/*
+						  				Now we apply our rules and draw the pagination object.
 						  				We're actually saving the code to a variable in case we want to draw it more than once.
 						  			*/
 						  			$pagination = "";
 						  			if($lastpage > 1)
-						  			{	
+						  			{
 						  				$pagination .= "<div class='btn-group'>";
 
 						  				//previous button
-						  				if ($page > 1) 
+						  				if ($page > 1)
 						  					$pagination .= "<a class='btn btn-default' href='".paginatingLink($prev)."' title='Prev'><i class='fa fa-angle-left'></i></a>";
 						  				else
-						  					$pagination .= "";	
-						  				
-						  				//pages	
+						  					$pagination .= "";
+
+						  				//pages
 						  				if ($lastpage < 7 + ($adjacents * 2))	//not enough pages to bother breaking it up
-						  				{	
+						  				{
 						  					for ($counter = 1; $counter <= $lastpage; $counter++)
 						  					{
 						  						if ($counter == $page)
 						  							$pagination .= "<span class='btn btn-primary' title='$counter'>$counter</span>";
 						  						else
-						  							$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";					
+						  							$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";
 						  					}
 						  				}
 						  				elseif($lastpage >= 7 + ($adjacents * 2))	//enough pages to hide some
 						  				{
 						  					//close to beginning; only hide later pages
-						  					if($page < 1 + ($adjacents * 3))		
+						  					if($page < 1 + ($adjacents * 3))
 						  					{
 						  						for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++)
 						  						{
 						  							if ($counter == $page)
 						  								$pagination .= "<span class='btn btn-primary' title='$counter'>$counter</span>";
 						  							else
-						  								$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";					
+						  								$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";
 						  						}
 						  						$pagination .= "<span class='btn btn-default' >...</span>";
 						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink($lpm1)."' title='$lpm1'>$lpm1</a>";
-						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink($lastpage)."' title='$lastpage'>$lastpage</a>";		
+						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink($lastpage)."' title='$lastpage'>$lastpage</a>";
 						  					}
 						  					//in middle; hide some front and some back
 						  					elseif($lastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2))
 						  					{
 						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink(1)."' title='1'>1</a>";
-						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink(2)."' title='2'>2</a>";	
+						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink(2)."' title='2'>2</a>";
 						  						$pagination .= "<span class='btn btn-default' >...</span>";
 						  						for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++)
 						  						{
 						  							if ($counter == $page)
 						  								$pagination .= "<span class='btn btn-primary' title='$counter'>$counter</span>";
 						  							else
-						  								$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";					
+						  								$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";
 						  						}
 						  						$pagination .= "<span class='btn btn-default' >...</span>";
 						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink($lpm1)."' title='$lpm1'>$lpm1</a>";
-						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink($lastpage)."' title='$lastpage'>$lastpage</a>";		
+						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink($lastpage)."' title='$lastpage'>$lastpage</a>";
 						  					}
 						  					//close to end; only hide early pages
 						  					else
 						  					{
 						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink(1)."' title='1'>1</a>";
-						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink(2)."' title='2'>2</a>";	
+						  						$pagination .= "<a class='btn btn-default' href='".paginatingLink(2)."' title='2'>2</a>";
 						  						$pagination .= "<span class='btn btn-default' >...</span>";
 						  						for ($counter = $lastpage - (1 + ($adjacents * 3)); $counter <= $lastpage; $counter++)
 						  						{
 						  							if ($counter == $page)
 						  								$pagination .= "<span class='btn btn-primary' title='$counter'>$counter</span>";
 						  							else
-						  								$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";					
+						  								$pagination .= "<a class='btn btn-default' href='".paginatingLink($counter)."' title='$counter'>$counter</a>";
 						  						}
 						  					}
 						  				}
-						  				
+
 						  				//next button
-						  				if ($page < $counter - 1) 
+						  				if ($page < $counter - 1)
 						  					$pagination .= "<a class='btn btn-default' href='".paginatingLink($next)."' title='Next'><i class='fa fa-angle-right'></i></a>";
 						  				else
 						  					$pagination .= "";
 						  				$pagination .= "</div>";
 						  			}
-						  			
+
 						  			return $pagination;
 
 						  		}
-						  		
+
 							  	function paginatingLink($page){
 						  			$link = "/admin/show-post/".$_GET['order']."/".$_GET['itemperpage']."/";
 						  			if(isset($_GET['search'])){
@@ -341,7 +341,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-        
+        <button id="delete-post-button" class="btn btn-danger" data-toggle='modal' data-target='#delete-post'><i class="fa fa-times"></i> Delete Post</button>
       </div>
 		</div>
 	</div>

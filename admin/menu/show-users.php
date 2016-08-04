@@ -37,7 +37,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									
+
 								</tbody>
 							</table>
 						</div>
@@ -70,7 +70,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									
+
 								</tbody>
 							</table>
 						</div>
@@ -80,3 +80,95 @@
 		</div>
 	</section>
 </section>
+
+<div class='modal fade' id='detail-user' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+	<div class='modal-dialog'>
+		<div class='modal-content'>
+			<div class='modal-header'>
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+				<h4 class='modal-title' id='myModalLabel'>Detail User</h4>
+			</div>
+			<div class='modal-body'>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-horizontal form popup">
+							<input id="detail-username" type="hidden" name="name" value="">
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Username :</label>
+								<label id="detail-user-username" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Email :</label>
+								<label id="detail-user-email" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Nama :</label>
+								<label id="detail-user-nama" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Gender :</label>
+								<label id="detail-user-gender" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Tanggal lahir :</label>
+								<label id="detail-user-bornday" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Pendidikan :</label>
+								<label id="detail-user-pendidikan" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Provinsi :</label>
+								<label id="detail-user-provinsi" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Kota :</label>
+								<label id="detail-user-kota" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Kecamatan :</label>
+								<label id="detail-user-kecamatan" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Kelurahan :</label>
+								<label id="detail-user-kelurahan" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Alamat :</label>
+								<label id="detail-user-alamat" class="col-sm-9 control-label " style="text-align:left;"></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="aktifasi-button-footer" class="modal-footer">
+      </div>
+		</div>
+	</div>
+</div>
+
+<div class='modal fade' id='konfirmasi-aktifasi' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+	<div class='modal-dialog' style="margin-top:100px;">
+		<div class='modal-content'>
+			<div class='modal-header'>
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+				<h4 class='modal-title' id='myModalLabel'>Konfirmasi </h4>
+			</div>
+			<div class='modal-body'>
+				<div>
+					<p>Apakah Anda yakin dengan perintah ini?</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<span class="pull-right">
+					<a class="btn btn-danger" data-dismiss='modal'><i class="fa fa-times"></i> No</a>&nbsp
+					<button id="aktifasi-user-button" class="btn btn-success" value=""><i class="fa fa-check"></i> Yes</button>
+				</span>
+      </div>
+		</div>
+	</div>
+</div>
+
+<div id="notification" style="max-width:400px;min-width:300px;position:absolute;right:0;top:80px;">
+
+</div>

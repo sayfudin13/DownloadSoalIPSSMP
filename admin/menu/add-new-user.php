@@ -11,38 +11,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-md-6">
-				<div id="add-user-success" class="alert alert-success hidden">
-					<h1><strong>Success create new user!</strong></h1>
-					<p>this notification will disappear in 5 seconds.</p>
-				</div>
-				<section class="panel">
-					<header class="panel-heading">
-						New User
-					</header>
-					<div class="panel-body">
-						<div id="form-new-user" class="form-horizontal form">
-							<div class="form-group">
-								<label class="col-sm-3 control-label">Username <span class="required">*</span></label>
-								<div class="col-sm-9">
-									<input type="text" id="user-username" name="user-username" class="form-control" maxlength="20" disabled="">
-									<span id='add-user-err0' class="err"></span>
-									<i class="help-block">Note : link dapat digunakan saat username baru sudah berhasil di tambahkan.</i>
-									<a href="" id="add-user-link" ></a>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-3"></label>
-								<div class="col-sm-9">
-									<a id="add-user" name="add-user" class="btn btn-primary">Add User</a>
-									<a id="generate-user" name="generate-user" class="btn btn-warning">Generate</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div id="add-admin-success" class="alert alert-success hidden">
 					<h1><strong>Success create new admin!</strong></h1>
 					<p>this notification will disappear in 5 seconds.</p>
@@ -94,4 +63,3 @@
 		</div>
 	</section>
 </section>
-

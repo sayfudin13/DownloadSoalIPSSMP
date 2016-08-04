@@ -64,7 +64,7 @@ jQuery(function($) {
 		$.post('/admin/menu/delete-post/get-post-data.php',{
 			no: a
 		},function(result){
-			var r = JSON.parse(result);     
+			var r = JSON.parse(result);
 			$('#detail-image').attr("src", r['gambar']);
 			$('#delete-post-button').attr("value", a);
 			$('#detail-nama').html(r['nama']);
@@ -101,7 +101,7 @@ jQuery(function($) {
 		} else {
 			$('#divOldDocument').addClass('hidden');
 		}
-		
+
 		if( $('#divNewDocument.hidden').length ){
 			$('#divNewDocument').removeClass('hidden');
 		} else {
@@ -123,7 +123,7 @@ jQuery(function($) {
 		} else {
 			$('#divOldImage').addClass('hidden');
 		}
-		
+
 		if( $('#divNewImage.hidden').length ){
 			$('#divNewImage').removeClass('hidden');
 		} else {
@@ -174,7 +174,7 @@ jQuery(function($) {
 		$("#oldpwd").css("border", "1px solid #C7C7CC");
 		$('#err0').html("");
 	});
-	
+
 	$('#newpwd').on('focus input', function(){
 		$("#newpwd").css("border", "1px solid #C7C7CC");
 		$('#err1').html("");
@@ -214,7 +214,7 @@ jQuery(function($) {
 						$("#oldpwd").val("");
 						$("#newpwd").val("");
 						$("#renewpwd").val("");
-					}	
+					}
 				})
 			}
 		});
@@ -246,6 +246,9 @@ jQuery(function($) {
 			$('#show-table-user tbody').html(r[0]);
 		});
 	}
+
+
+
 
 	$(document).ready(showUserSearchAdmin);
 	$(".show-admin-search").on('change input', showUserSearchAdmin);
@@ -379,11 +382,58 @@ jQuery(function($) {
 
 });
 
-// new-post.php
 
 	function _(el){
 		return document.getElementById(el);
 	}
+
+//detail-user
+
+	function detailUser(element){
+		var username = element.getAttribute("username");
+		var formdata = new FormData();
+		formdata.append("username", username);
+		var ajax = new XMLHttpRequest();
+		ajax.addEventListener("load", completeHandlerDetailUser, false);
+		ajax.open("POST", "/admin/menu/show-user/get-user-data.php");
+		ajax.send(formdata);
+	}
+	function completeHandlerDetailUser(event){
+		var data = JSON.parse(event.target.responseText);
+		_("detail-user-username").innerHTML = data['username2'];
+		$("#detail-username").val(data['username']);
+		_("detail-user-email").innerHTML = data['email'];
+		_("detail-user-nama").innerHTML = data['nama'];
+		_("detail-user-gender").innerHTML = data['gender'];
+		_("detail-user-bornday").innerHTML = data['bornday'];
+		_("detail-user-pendidikan").innerHTML = data['pendidikan'];
+		_("detail-user-provinsi").innerHTML = data['provinsi'];
+		_("detail-user-kota").innerHTML = data['kota'];
+		_("detail-user-kecamatan").innerHTML = data['kecamatan'];
+		_("detail-user-kelurahan").innerHTML = data['kelurahan'];
+		_("detail-user-alamat").innerHTML = data['alamat'];
+		_("aktifasi-button-footer").innerHTML = data['button'];
+		$("#detail-user").modal("show");
+	}
+
+	$('#aktifasi-user-button').click(function () {
+		$.post('/admin/menu/show-user/aktifasi-user.php',{
+			username: $('#detail-username').val()
+		},function(result){
+			if(result == 1){
+				$("#konfirmasi-aktifasi").modal("hide");
+				$("#detail-user").modal("hide");
+				var alert = '<div class="alert alert-success fade in"><button type="button" class="close" data-dismiss="alert">&times;</button>Status akun berhasil diubah.</div>';
+				var notification = $("#notification").html();
+				$("#notification").html(notification+alert);
+			}
+		});
+	});
+
+//end detail-user
+
+// new-post.php
+
 	function uploadFileDocument(){
 		var file = _("dokumen").files[0];
 		var formdata = new FormData();
@@ -449,7 +499,7 @@ jQuery(function($) {
 			$("#judul").css("border", "2px solid #EAEEF1");
 			$('#err0').html("");
 		});
-		
+
 		$('#dokumen').on('focus change', function(){
 			$("#dokumen").css("border", "none");
 			$('#err1').html("");
@@ -610,8 +660,8 @@ jQuery(function($) {
 			});
 		});
 
-	});	
+	});
 
-		
+
 
 // end new-post.php

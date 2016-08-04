@@ -36,8 +36,10 @@ if ($row == 1) {
   $text_body = str_replace("[nama]",$data['nama'],$text_body);
   $body = str_replace("[username]",$data['username'],$body);
   $text_body = str_replace("[username]",$data['username'],$text_body);
-  $body = str_replace("[link]","http://www.downloadsoalipssmp.com/forget-password/reset?u=".$data['username']."&k=".$data['changepass'],$body);
-  $text_body = str_replace("[link]","http://www.downloadsoalipssmp.com/forget-password/reset?u=".$data['username']."&k=".$data['changepass'],$text_body);
+  $body = str_replace("[link]","http://".$_SERVER['HTTP_HOST']."/forget-password/reset?u=".$data['username']."&k=".$data['changepass'],$body);
+  $text_body = str_replace("[link]","http://".$_SERVER['HTTP_HOST']."/forget-password/reset?u=".$data['username']."&k=".$data['changepass'],$text_body);
+  $body = str_replace("[domain]","http://".$_SERVER['HTTP_HOST'],$body);
+  $text_body = str_replace("[domain]","http://".$_SERVER['HTTP_HOST'],$text_body);
 
   $mail->Body = $body;
   $mail->AltBody = $text_body;

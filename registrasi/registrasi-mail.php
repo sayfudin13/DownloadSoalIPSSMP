@@ -76,6 +76,9 @@ if ($row == 1) {
   //alamat
   $body = str_replace("[alamat]",$data['alamat'],$body);
   $text_body = str_replace("[alamat]",$data['alamat'],$text_body);
+  //domain
+  $body = str_replace("[domain]","http://".$_SERVER['HTTP_HOST'],$body);
+  $text_body = str_replace("[domain]","http://".$_SERVER['HTTP_HOST'],$text_body);
 
   $mail->Body = $body;
   $mail->AltBody = $text_body;

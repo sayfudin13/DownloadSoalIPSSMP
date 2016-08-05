@@ -108,6 +108,14 @@
 				}
 			}
 
+      function sembunyikanGambar(){
+        if (isset($_SESSION['sembunyikanGambar'])) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
 			echo "
 				<ul class='portfolio-filter'>
 					<li><a class='btn btn-default ".activeLi('kelas-7')."' href='/soal-dan-materi/kelas-7/1/' >Kelas 7</a></li>
@@ -120,7 +128,14 @@
 				</ul><!--/#portfolio-filter-->
 			";
 
-			$maxItemShownPerPage = 8;
+      $gambar = (sembunyikanGambar()) ? "checked" : "";
+      echo '
+        <div class="">
+          <input id="sembunyikan-gambar" type="checkbox" '.$gambar.'> <label for="sembunyikan-gambar">Sembunyikan gambar</label>
+        </div>
+      ';
+
+			$maxItemShownPerPage = (sembunyikanGambar()) ? 16 : 8;
 			$maxPageNumberShownPerPage = 5;
 			$halfOfMaxPageNumberShownPerPage = floor($maxPageNumberShownPerPage/2);
 			$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
@@ -128,9 +143,9 @@
 
 			$query_item;
 			if($_GET['category'] != 'sample'){
-				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."' LIMIT $itemStart,$maxItemShownPerPage ");
+				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."' ORDER BY tanggal desc LIMIT $itemStart,$maxItemShownPerPage");
 			} else {
-				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE status = '".$_GET['category']."' LIMIT $itemStart,$maxItemShownPerPage ");
+				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE status = '".$_GET['category']."' ORDER BY tanggal desc LIMIT $itemStart,$maxItemShownPerPage");
 			}
 
 
@@ -140,8 +155,10 @@
 					<li class='portfolio-item'>
 						<a href='http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]".$data_item['no']."-".$data_item['nama']."/'>
 							<div class='item-inner'>
-								<img src='".$data_item['alamat_gambar']."' alt='".$data_item['nama']."'>
-								<h5>".$data_item['nama']."</h5>
+          ";
+				$text_item .= (sembunyikanGambar()) ? "" : "<img src='".$data_item['alamat_gambar']."' alt='".$data_item['nama']."'>";
+				$text_item .=	"
+                <h5>".$data_item['nama']."</h5>
 								<div class='overlay'>
 								</div>
 							</div>
@@ -153,9 +170,9 @@
 			echo $text_item;
 
 			if($_GET['category'] != 'sample'){
-				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."'");
+				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."' ORDER BY tanggal desc");
 			} else {
-				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE status = '".$_GET['category']."'");
+				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE status = '".$_GET['category']."' ORDER BY tanggal desc");
 			}
 			$totalPages = ceil(mysqli_num_rows($query_item) / $maxItemShownPerPage);
 			$totalitems = mysqli_num_rows($query_item);

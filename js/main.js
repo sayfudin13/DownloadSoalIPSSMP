@@ -499,4 +499,11 @@ jQuery(function($) {
 		$('.search-toggle').css({"right": "-230px"});
 	});
 
+	//sembunyikanGambar checkbox
+	$("#sembunyikan-gambar:checkbox").change(function(event) {
+		$.post('/sembunyikanGambar/sby', function(result) {
+			location.reload();
+		});
+	});
+
 });

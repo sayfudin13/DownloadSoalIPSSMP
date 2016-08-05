@@ -135,7 +135,7 @@
         </div>
       ';
 
-			$maxItemShownPerPage = (sembunyikanGambar()) ? 16 : 8;
+			$maxItemShownPerPage = 8;
 			$maxPageNumberShownPerPage = 5;
 			$halfOfMaxPageNumberShownPerPage = floor($maxPageNumberShownPerPage/2);
 			$page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;

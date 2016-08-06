@@ -79,13 +79,13 @@ jQuery(function($) {
 		social_tools: false
 	});
 
-	$(".input-search").keyup(function(event){
+	$("#input-search").keyup(function(event){
 		if(event.keyCode == 13){
 			searchPost();
 		}
 	});
 	function searchPost() {
-		var isiInput = $(".input-search").val();
+		var isiInput = $("#input-search").val();
 		var href = "/search/"+isiInput+"/1/";
 		if(isiInput == ""){
 			href = "/search";
@@ -93,79 +93,6 @@ jQuery(function($) {
 		window.location.href = href;
 	}
 
-	// $(".button-search").click(function() {
-	// 	var isiInput = $(".input-search").val();
-	// 	var href = "/search/"+isiInput+"/1/";
-	// 	if(isiInput == ""){
-	// 		href = "/search";
-	// 	}
-	// 	// window.location.replace(href);
-	// 	window.location.href = href;
-	// });
-
-
-	//register
-	// $('#register-username').on('focus input', function(){
-	// 	$("#register-username").css("border", "1px solid #CCC");
-	// 	$('#registererr0').html("");
-	// });
-	//
-	// $('#register-password').on('focus input', function(){
-	// 	$("#register-password").css("border", "1px solid #CCC");
-	// 	$('#registererr1').html("");
-	// });
-	//
-	// $('#register-repassword').on('focus input', function(){
-	// 	$("#register-repassword").css("border", "1px solid #CCC");
-	// 	$('#registererr2').html("");
-	// });
-	//
-	// $('#register-email').on('focus input', function(){
-	// 	$("#register-email").css("border", "1px solid #CCC");
-	// 	$('#registererr3').html("");
-	// });
-	//
-	// $("#register-button").click(function(){
-	// 	$.post('/reg/cek-register.php',{
-	// 		oldusername: $('#register-h').val(),
-	// 		username: $('#register-username').val(),
-	// 		password: $('#register-password').val(),
-	// 		repassword: $('#register-repassword').val(),
-	// 		email: $('#register-email').val()
-	// 	},function(result){
-	// 		var r = JSON.parse(result);
-	// 		if(r[0]!=0){
-	// 			$('#registererr0').html(r[0]);
-	// 			$("#register-username").css("border", "2px solid red");
-	// 		}
-	// 		if(r[1]!=0){
-	// 			$('#registererr1').html(r[1]);
-	// 			$("#register-password").css("border", "2px solid red");
-	// 		}
-	// 		if(r[2]!=0){
-	// 			$('#registererr2').html(r[2]);
-	// 			$("#register-repassword").css("border", "2px solid red");
-	// 		}
-	// 		if(r[3]!=0){
-	// 			$('#registererr3').html(r[3]);
-	// 			$("#register-email").css("border", "2px solid red");
-	// 		}
-	// 		if(r[0]==0 && r[1]==0 && r[2]==0 && r[3]==0){
-	// 			$.post('/reg/save-register.php',{
-	// 				oldusername: $('#register-h').val(),
-	// 				username: $('#register-username').val(),
-	// 				password: $('#register-password').val(),
-	// 				email: $('#register-email').val()
-	// 			},function(result){
-	// 				if(result == 1){
-	// 					window.location.replace("/reg/register_success");
-	// 				}
-	// 			})
-	// 		}
-	// 	});
-	// });
-
-	//end register
 
 	//form-registration
 	$('#register-provinsi').change(function(event) {

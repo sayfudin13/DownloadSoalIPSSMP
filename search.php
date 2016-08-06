@@ -44,7 +44,7 @@
 					<?php
 						$searchValue = (isset($_GET['search'])) ? $_GET['search'] : "";
 					?>
-					<li><input type='search' class='form-control visible-xs' placeholder='Search' value="<?=$searchValue?>"></li>
+					<li><input type='search' class='form-control input-search visible-xs' placeholder='Search' value="<?=$searchValue?>"></li>
 					<li ><a href="/">Home</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Soal dan Materi <i class="icon-angle-down"></i></a>

@@ -68,7 +68,7 @@
                 <font color="white"><i class="icon-search"></i></font>
             </div>
             <div class="col-sm-10">
-                <input type='search' id="input-search" class='form-control' placeholder='Search' value="<?=$searchValue?>">
+                <input type='search' class='form-control input-search' placeholder='Search' value="<?=$searchValue?>">
             </div>
         </div>
     </div>

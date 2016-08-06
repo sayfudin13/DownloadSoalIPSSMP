@@ -79,13 +79,14 @@ jQuery(function($) {
 		social_tools: false
 	});
 
-	$("#input-search").keyup(function(event){
+	$(".input-search").keyup(function(event){
 		if(event.keyCode == 13){
-			searchPost();
+			var element = $(this);
+			searchPost(element);
 		}
 	});
-	function searchPost() {
-		var isiInput = $("#input-search").val();
+	function searchPost(element) {
+		var isiInput = element.val();
 		var href = "/search/"+isiInput+"/1/";
 		if(isiInput == ""){
 			href = "/search";

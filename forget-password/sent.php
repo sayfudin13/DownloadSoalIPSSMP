@@ -18,7 +18,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Forget Password | Download Soal IPS SMP</title>
+	<title>Request Forget Password Success | Download Soal IPS SMP</title>
 	<?php include('../add/css-js-icon.php'); ?>
 </head><!--/head-->
 <body>
@@ -62,8 +62,8 @@
 
 	<section id="error" class="container">
 		<h1>Permintaan Pemulihan Password Berhasil</h1>
-		<p>Anda akan menerima link pemulihan password melalui email.<br>Jika Anda tidak menerima email silahkan cek folder spam Anda atau klik tombol dibawah untuk mengirim ulang.</p>
-    <button id="reset-password-resend-button" type="button" name="button" class="btn btn-info">Kirim ulang</button>
+		<p>Anda akan menerima link pemulihan password melalui email.<br>Jika Anda tidak menerima email silahkan <font color="orange">cek folder spam</font> Anda atau klik tombol dibawah untuk mengirim ulang.</p>
+    <button id="reset-password-resend-button" type="button" name="button" class="btn btn-info">KIRIM ULANG</button>
     <p></p>
 		<a class="btn btn-success" href="/">CLICK HERE TO BACK TO HOMEPAGE</a>
 	</section><!--/#error-->

@@ -9,11 +9,11 @@
 	$tagsinput=$_POST['tagsinput'];
 	$Err = array(0,0,0,0,0,0,0);
 
-	
+
 	if (empty($judul)) {
 		$Err[0]="This field is required.";
 	}
-	
+
 	if(!file_exists("../../../soal/soal/$dokumen")){
 		$Err[1]="$dokumen not found, please re-upload";
 	}
@@ -34,9 +34,9 @@
 		$Err[5]="Description too long, must be less than 3000 characters";
 	}
 
-	if (strlen($tagsinput) > 200) {
+	if (strlen($tagsinput) > 1000) {
 		$Err[6]="Tags too long, must be less than 200 characters";
 	}
-	
+
 	echo json_encode($Err);
 ?>

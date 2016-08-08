@@ -62,8 +62,9 @@
 								<div class="col-sm-10">
 									<select class="form-control" id="status" name="status">
 										<option value="0">Choose : </option>
-										<option value="sample">Sample</option>
-										<option value="bukan">Not Sample</option>
+										<option value="soal">Soal</option>
+										<option value="materi">Materi</option>
+										<option value="sample">Sampel</option>
 									</select>
 									<span id='err3' class="err"></span>
 								</div>
@@ -93,7 +94,7 @@
 							<div class="form-group">
 								<label class="control-label col-sm-2">Tags</label>
 								<div class="col-sm-10">
-									<input name="tagsinput" id="tagsinput" class="tagsinput" maxlength='200' value="" />
+									<input name="tagsinput" id="tagsinput" class="tagsinput" maxlength='1000' value="" />
 									<span id='err6' class="err"></span>
 								</div>
 							</div>
@@ -111,4 +112,3 @@
 		</div>
 	</section>
 </section>
-

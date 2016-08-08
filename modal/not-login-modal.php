@@ -6,8 +6,8 @@
 				<h4 class='modal-title' id='myModalLabel'>Akses Ditolak</h4>
 			</div>
 			<div class='modal-body'>
-				<p>Anda tidak dapat men-download konten ini karena Anda tidak login.</p>
-				<p>Silahkan login terlebih dahulu.</p>
+				<p>Anda belum bisa men-download konten ini karena Anda belum login/registrasi.</p>
+				<p>Silahkan login/registrasi terlebih dahulu.</p>
 				<p>Jika Anda tidak punya akun bisa daftar <a href="/registrasi" style="color:red">disini.</a></p>
 			</div>
 		</div>

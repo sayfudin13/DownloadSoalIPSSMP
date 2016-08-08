@@ -170,21 +170,21 @@
 							<p class="paragraph">Penilaian adalah suatu proses yang dilakukan untuk mengukur dan menilai pencapaian tujuan pembelajaran serta untuk mengetahui kekuatan dan kelemahan dalam proses pembelajaran. Penilaian hasil belajar oleh pendidik terdiri atas Ulangan Harian, Ulangan Tengah Semester, Ulangan Akhir Semester, dan Ulangan Kenaikan Kelas.</p>
 							<p class="paragraph">Dalam rangka proses penilaian, untuk melaksanakan penilaian tersebut guru menyusun Teknik dan Instrumen Penilaian. Penyusunan Teknik dan Instrumen perlu di lakukan sebaik-baiknya sehingga dapat mengukur kompetensi siswa dan mencapai tujuan pembelajaran. Penyusunan Instrumen juga perlu memperhatikan keterselenggaraannya. Baik diperhatikan indikator pembelajarannya, tingkat berpikirnya, tingkat kesukaran dan daya pembeda yang nantinya akan di susun ke dalam tabel konstruksi soal yang disebut dengan kisi-kisi penyusunan soal.</p>
 							<p class="paragraph">Tapi dalam pelaksanaannya, terdapat banyak kendala bagi guru untuk menyusun konstruksi soal dan penilaian. Hal ini disebabkan oleh banyaknya peran dan tugas guru yang lain selain mengajar dan melakukan penilaian. Menyusun perangkat pembelajaran, mengelola kelas bagi yang bertugas sebagai wali kelas, panggilan siswa dan penanganan kasus, kepanitiaan dalan event-event sekolah yang tentunya semua ini akan menyita waktu. Belum juga ada guru yang jam mengajarnya sangat banyak (dalam pengalaman saya 40 jam) sehingga akan menjadi kendala dalam menyusun instrumen soal dan penilaian yang ideal.</p>
-							<p class="paragraph">Oleh karena itu, rekan-rekan guru dan pengajar sekalian. Perkenankanlah saya untuk berbagi pengalaman dengan rekan-rekan sekalian dimana saya Guru IPS SMP telah mengajar 10 tahun di SMP dan menjadi guru privat les membagikan soal-soal IPS SMP dari Kelas VII – IX hampir berjumlah 4.300 soal yang tentunya ini dapat membantu bapak/ibu rekan-rekan sekalian dalam penyusunan instrumen penilaian dan soal-soal. Jumlah soal sebanyak 4.300 tadi juga termasuk dengan soal Olimpiade IPS SMP yang tergolong “Langka” kita temui sebanyak 6 Jilid atau sebanyak 600 soal. Soal Olimpiade IPS SMP saya dapatkan secara pribadi pada saat pengalaman saya menjadi pembimbing OSN IPS Siswa sampai kepada tingkat provinsi.</p>
+							<p class="paragraph">Oleh karena itu, rekan-rekan guru dan pengajar sekalian, perkenankanlah saya untuk berbagi pengalaman dengan rekan-rekan sekalian dimana saya Guru IPS SMP telah mengajar 10 tahun di SMP dan menjadi guru privat les membagikan soal-soal IPS SMP dari Kelas VII – IX hampir berjumlah 4.300 soal yang tentunya ini dapat membantu bapak/ibu rekan-rekan sekalian dalam penyusunan instrumen penilaian dan soal-soal. Jumlah soal sebanyak 4.300 tadi juga termasuk dengan soal Olimpiade IPS SMP yang tergolong “Langka” kita temui sebanyak 6 Jilid atau sebanyak 600 soal. Soal Olimpiade IPS SMP saya dapatkan secara pribadi pada saat pengalaman saya menjadi pembimbing OSN IPS Siswa sampai kepada tingkat provinsi.</p>
 							<p class="paragraph">Secara umum, Isi Website ini antara lain :</p>
               <ol>
                 <li><strong>Soal IPS SMP Kelas VII s.d Kelas IX, untuk daftar soal secara lengkap dilampirkan bagian content.</strong></li>
                 <li>Try Out IPS Kelas IX.</li>
                 <li>Ujian Sekolah (Sebanyak 5 Paket).</li>
                 <li><strong>Soal Olimpiade Siswa Nasional (Sebanyak 6 Jilid).</strong></li>
-                <li>Rangkuman Materi IPS kelas VII s.d  IX, berdasarkan bahan ajar saya selama mengajar IPS SMP yang awalnya diperuntukkan untuk Rangkuman Foto Copy siswa.Silabus dan RPP IPS Kelas VII s.d IX KTSP yang merupakan hasil tulisan tangan saya sendiri (bukan yang beredar dan dapat didownload / bukan versi alam takambang), Silabus dan RPP tersebut sudah diakui bagus oleh Pengawas Sekolah.</li>
+                <li>Rangkuman Materi IPS kelas VII s.d  IX, berdasarkan bahan ajar saya selama mengajar IPS SMP yang awalnya diperuntukkan untuk Rangkuman Foto Copy siswa.</li>
                 <li><strong>Silabus dan RPP IPS Kelas VII s.d IX KTSP</strong> yang merupakan hasil tulisan tangan saya sendiri (bukan yang beredar dan dapat didownload / bukan versi alam takambang), Silabus dan RPP tersebut sudah diakui bagus oleh Pengawas Sekolah.</li>
                 <li><strong>RPP IPS Kelas 8 IPS Kurikulum 2013.</strong></li>
                 <li>Powerpoint untuk mengajar hampir sejumlah 100 file dari berbagai sumber.</li>
               </ol>
 							<p class="paragraph"><strong>Kelebihan File-file soal yang saya sediakan adalah semuanya berbentuk Office Word dan Power Point (Slide Mengajar).</strong> Saya berharap Website ini dapat membantu bapak/ibu dan rekan-rekan guru sekalian dalam menyusun instrumen soal dan penilaian. Menjadi One Stop Show dalam menyusun soal IPS SMP. Jangan tunggu lagi untuk mendaftar.</p>
 							<p class="paragraph">Beberapa sample file bapak/ibu dan rekan-rekan sekalian bisa download <a href="/soal-dan-materi/sample/1/" style="color:red;"><u>disini</u></a>.</p>
-							<p class="paragraph"><strong>Untuk administrasi pendaftaran, pemeliharaan dan hosting website, serta penyegaran materi. Kami meminta kesediaan bapak/ibu dan rekan-rekan sekalian untuk menyumbangkan dana sejumlah Rp35.000,- . Bapak/Ibu dan Rekan-rekan sekalian jangan berpikir sejumlah dana yang disumbangkan. Anggap saja ini sebagai jasa saya untuk mengetik soal-soal dan <i>web maintenance</i>. Jauh lebih banyak manfaat yang akan bapak/ibu dan rekan-rekan sekalian yang didapat. Untuk teknis pendaftaran bapak/ibu dan rekan-rekan sekalian dapat lihat di bagian syarat dan ketentuan pendaftaran.</strong></p>
+							<p class="paragraph"><strong>Untuk administrasi pendaftaran, pemeliharaan dan hosting website, serta penyegaran materi. Kami meminta kesediaan bapak/ibu dan rekan-rekan sekalian untuk mendonasikan dana sejumlah Rp 40.000,- . Bapak/Ibu dan Rekan-rekan sekalian jangan berpikir sejumlah dana yang didonasikan. Anggap saja ini sebagai jasa saya untuk mengetik soal-soal dan <i>web maintenance</i>. Jauh lebih banyak manfaat yang akan bapak/ibu dan rekan-rekan sekalian yang didapat. Untuk teknis pendaftaran bapak/ibu dan rekan-rekan sekalian dapat lihat di bagian syarat dan ketentuan pendaftaran.</strong></p>
 						</div>
 					</div>
 				</div><!--/.col-md-4-->
@@ -197,8 +197,8 @@
 			<div class="row">
 				<div class="col-md-3">
 					<h3>Contoh Soal</h3>
-					<p>Beberapa sample file bapak/ibu dan rekan-rekan sekalian bisa download.</p>
-					<a class="btn btn-danger" href="/soal-dan-materi/sample/1/">See all sample</a>
+					<p>Beberapa sampel file bapak/ibu dan rekan-rekan sekalian bisa download.</p>
+					<a class="btn btn-danger" href="/soal-dan-materi/sample/1/">Lihat semua sampel</a>
 					<p class="gap"></p>
 				</div>
 				<div class="col-md-9">

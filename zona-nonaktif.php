@@ -1,6 +1,9 @@
 <?php
-include_once("db/config.inc.php");
+include("db/config.inc.php");
 session_start();
+if (isset($_SESSION['username'])) {
+  header('Location: http://'.$_SERVER['HTTP_HOST'].'/');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

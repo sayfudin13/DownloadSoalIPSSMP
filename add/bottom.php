@@ -1,19 +1,20 @@
 <section id="bottom" class="wet-asphalt">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-5 col-sm-5">
                 <h4>Contact Info</h4>
                 <div>
                     <ul class="unstyled">
                         <li><i class="icon-user"></i> Name : Hendry Suhardiman</li>
                         <li><i class="icon-map-marker"></i> Address : Margahayu, Bandung</li>
-                        <li><i class="icon-credit-card"></i> BCA : 2797006960</li>
+                        <li><i class="icon-credit-card"></i> BCA : 279 700 6960 (a.n. Hendry Suhardiman)</li>
+                        <li><i class="icon-credit-card"></i> OCBC NISP : 6148 1000 4323 (a.n. Hendry Suhardiman)</li>
                     </ul>
                 </div>
             </div> <!--/.col-md-3-->
 
             <div class="col-md-4 col-sm-4">
-                <h4>Soal dan Meteri</h4>
+                <h4>Soal dan Materi</h4>
                 <div>
                     <ul class="arrow">
                         <li><a href="/soal-dan-materi/kelas-7/1/">Kelas 7</a></li>
@@ -27,7 +28,7 @@
                 </div>
             </div><!--/.col-md-3-->
 
-            <div class="col-md-4 col-sm-4">
+            <div class="col-md-3 col-sm-3">
                 <h4>Terms and Privacy</h4>
                 <div>
                     <ul class="arrow">

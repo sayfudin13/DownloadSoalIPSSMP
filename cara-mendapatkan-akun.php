@@ -76,11 +76,11 @@ session_start();
         <li>
             <span class="number">02</span>
             <div>
-                <h4>Mentransfer biaya sebesar Rp 50.000,-</h4>
-                <p>Transfer dapat dilakukan dengan datang langsung ke bank, mentransfer lewat ATM, atau menggunakan internet banking ke salah satu rekening berikut :</p>
+                <h4>Donasi biaya sebesar Rp 40.000,-</h4>
+                <p>Donasi ini bertujuan untuk administrasi pendaftaran, pemeliharaan dan hosting website, serta penyegaran materi. Donasi dapat dilakukan dengan transfer ke salah satu rekening bank berikut :</p>
                 <ul>
-                  <li>BCA No rek. 2797006960</li>
-                  <li>Another bank account ...</li>
+                  <li>BCA : 279 700 6960 (a.n. Hendry Suhardiman)</li>
+                  <li>OCBC NISP : 6148 1000 4323 (a.n. Hendry Suhardiman)</li>
                 </ul>
             </div>
         </li>
@@ -88,12 +88,7 @@ session_start();
             <span class="number">03</span>
             <div>
                 <h4>Konfirmasi Pembayaran</h4>
-                <p>Kemudian konfirmasi pembayaran Anda mengirim melalui media berikut ini:</p>
-                <ul>
-                  <li>SMS : 0898 666 6666</li>
-                  <li>E-mail : support@mytempweb.tk</li>
-                  <li>Another ways ...</li>
-                </ul>
+                <p>Setelah pendaftaran Anda akan mendapatkan email mengenai cara mengkonfirmasikan pembayaran yang telah Anda lakukan. Format konfirmasi telah kami sertakan di dalam email. Anda dapat menginformasikan pembayaran Anda melalui sms, Whatsapp, atau email yang telah kami terakan di dalam email.</p>
             </div>
         </li>
         <li>

@@ -22,8 +22,8 @@ if ($row == 1) {
   $mail->Port = 465;
   $mail->Username = "mytemp.web@yahoo.com";
   $mail->Password = "tempjohan";
-  $mail->From = "noreply@mytempweb.tk";
-  $mail->FromName = "MyTempWeb";
+  $mail->From = "noreply@".after(".",$_SERVER['HTTP_HOST']);
+  $mail->FromName = "Download Soal IPS SMP";
   $mail->Subject = "Pendaftaran Akun";
   $body = file_get_contents('./registrasi-mail-html.DSISmail');
   // untuk mail klien yang tidak bisa baca format html
@@ -88,5 +88,44 @@ if ($row == 1) {
   echo $mail->Send();
 
 }
+
+function after ($this, $inthat)
+{
+  if (!is_bool(strpos($inthat, $this)))
+  return substr($inthat, strpos($inthat,$this)+strlen($this));
+};
+
+function after_last ($this, $inthat)
+{
+  if (!is_bool(strrevpos($inthat, $this)))
+  return substr($inthat, strrevpos($inthat, $this)+strlen($this));
+};
+
+function before ($this, $inthat)
+{
+  return substr($inthat, 0, strpos($inthat, $this));
+};
+
+function before_last ($this, $inthat)
+{
+  return substr($inthat, 0, strrevpos($inthat, $this));
+};
+
+function between ($this, $that, $inthat)
+{
+  return before ($that, after($this, $inthat));
+};
+
+function between_last ($this, $that, $inthat)
+{
+  return after_last($this, before_last($that, $inthat));
+};
+// use strrevpos function in case your php version does not include it
+function strrevpos($instr, $needle)
+{
+  $rev_pos = strpos (strrev($instr), strrev($needle));
+  if ($rev_pos===false) return false;
+  else return strlen($instr) - $rev_pos - strlen($needle);
+};
 
 ?>

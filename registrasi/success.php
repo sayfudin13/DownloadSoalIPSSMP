@@ -62,8 +62,8 @@
 
 	<section id="error" class="container">
 		<h1>Register Success</h1>
-		<p>Anda akan menerima email pemberitahuan selanjutnya untuk mengaktifkan akun Anda.<br>Jika Anda tidak menerima email silahkan cek folder spam Anda atau klik tombol dibawah untuk mengirim ulang.</p>
-		<button id="registrasi-resend-button" type="button" name="button" class="btn btn-info">Kirim ulang</button>
+		<p>Anda akan menerima email pemberitahuan selanjutnya untuk mengaktifkan akun Anda.<br>Jika Anda tidak menerima email silahkan <font color="orange">cek folder spam</font> Anda atau klik tombol dibawah untuk mengirim ulang.</p>
+		<button id="registrasi-resend-button" type="button" name="button" class="btn btn-info">KIRIM ULANG</button>
     <p></p>
 		<a class="btn btn-success" href="/">CLICK HERE TO BACK TO HOMEPAGE</a>
 	</section><!--/#error-->

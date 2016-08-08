@@ -359,11 +359,12 @@
 														http://kb.mailchimp.com/templates/code/create-editable-content-areas-with-mailchimps-template-language
 													-->
 
-													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Untuk dapat menggunakan akun Anda, Anda harus melakukan transfer sebesar Rp 50.000,- (lima puluh ribu rupiah) ke nomor rekening dibawah ini:</div>
+													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Untuk dapat menggunakan akun Anda, Kami meminta kesediaan Bapak/Ibu untuk mendonasikan dana sejumlah Rp 40.000,- (empat puluh ribu rupiah).</div>
+													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Anda dapat mendonasikan dana melalui transfer bank ke nomor rekening dibawah ini:</div>
 													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
 														<ul>
-															<li>BCA : 3271832163271 (Henry Suhardiman)</li>
-															<li>Mandiri : 3271832163271 (Henry Suhardiman)</li>
+															<li>BCA : 279 700 6960 (Henry Suhardiman)</li>
+															<li>OCBC NISP : 6148 1000 4323 (Henry Suhardiman)</li>
 														</ul>
 													</div>
 												</td>
@@ -411,12 +412,13 @@
 														you to edit certain row. It makes it easy for you to quickly edit row sections.
 														http://kb.mailchimp.com/templates/code/create-editable-content-areas-with-mailchimps-template-language
 													-->
-													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Setelah Anda selesai transfer, tunjukan bukti transfer yang sah dengan format sebagai berikut:</div>
+													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Setelah Anda selesai transfer, Anda dapat mengkonfirmasikan bukti transfer Anda dengan format sebagai berikut:</div>
 													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
 														<ul style="list-style-type:none">
-															<li>Email : ...</li>
+															<li>Email/Username : ...</li>
 															<li>No transfer : ...</li>
 															<li>Bank transfer : ...</li>
+															<li>Foto/Screenshot (optional) : ...</li>
 														</ul>
 													</div>
 												</td>
@@ -464,12 +466,12 @@
 														you to edit certain row. It makes it easy for you to quickly edit row sections.
 														http://kb.mailchimp.com/templates/code/create-editable-content-areas-with-mailchimps-template-language
 													-->
-													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Kirim bukti transfer Anda melalui metode dibawah ini:</div>
+													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Konfirmasikan bukti transfer Anda melalui metode dibawah ini:</div>
 													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
 														<ul>
-															<li>SMS : 0898 7460 386</li>
-															<li>Email : support@mytempweb.tk</li>
-															<li>Another ways : ... </li>
+															<li>SMS : 0878 2178 6917 (Hotline 24 jam)</li>
+															<li>WhatsApp : 0878 2178 6917 (Hotline 24 jam)</li>
+															<li>Email : downloadsoalipssmp@yahoo.com</li>
 														</ul>
 													</div>
 												</td>
@@ -516,7 +518,7 @@
 														you to edit certain row. It makes it easy for you to quickly edit row sections.
 														http://kb.mailchimp.com/templates/code/create-editable-content-areas-with-mailchimps-template-language
 													-->
-													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Kami akan mengaktifkan akun Anda segera setelah kami menerima dan memverifikasi bukti transfer yang Anda kirimkan.</div>
+													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Kami akan mengaktifkan akun Anda segera setelah kami menerima dan memverifikasi bukti transfer yang Anda kirimkan. (paling lambat dalam 24 jam setelah konfirmasi).</div>
 													<div mc:edit="body" style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">Anda akan menerima email pemberitahuan bahwa akun Anda telah dapat digunakan.</div>
 												</td>
 											</tr>

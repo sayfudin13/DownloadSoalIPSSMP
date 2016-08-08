@@ -13,6 +13,9 @@
 		if(!isset($_GET['category'])){
 			$_GET['category'] = "";
 		}
+    if(!isset($_SESSION['showSoalMateri'])){
+			$_SESSION['showSoalMateri'] = "";
+		}
 		switch ($_GET['category']) {
 			case "kelas-7":$category="Kelas 7";break;
 			case "kelas-8":$category="Kelas 8";break;
@@ -116,6 +119,34 @@
         }
       }
 
+      function showSoalMateri($element){
+        if ($_SESSION['showSoalMateri'] == $element) {
+          return "selected";
+        }
+      }
+
+      function isCategoryEqualsKelas(){
+        if (strpos($_GET['category'], 'kelas') !== false) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function querySoalMateri(){
+        switch ($_SESSION['showSoalMateri']) {
+          case '':
+            return '';
+            break;
+          case 'soal':
+            return 'AND status = "soal"';
+            break;
+          case 'materi':
+            return 'AND status = "materi"';
+            break;
+        }
+      }
+
 			echo "
 				<ul class='portfolio-filter'>
 					<li><a class='btn btn-default ".activeLi('kelas-7')."' href='/soal-dan-materi/kelas-7/1/' >Kelas 7</a></li>
@@ -129,8 +160,18 @@
 			";
 
       $gambar = (sembunyikanGambar()) ? "checked" : "";
+      if (isCategoryEqualsKelas()) {
+        echo '
+          <select id="show-soal-materi" style="width: 100%;max-width:300px;eight: 34px;padding: 6px 12px;font-size: 14px;line-height: 1.42857;color: #555;vertical-align: middle;background-color: #FFF;border: 1px solid #CCC;border-radius: 4px;box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;">
+            <option value="1" '.showSoalMateri('').'>Tampilkan soal dan materi</option>
+            <option value="2" '.showSoalMateri('soal').'>Tampilkan soal saja</option>
+            <option value="3" '.showSoalMateri('materi').'>Tampilkan materi saja</option>
+          </select>
+        ';
+      }
+
       echo '
-        <div class="">
+        <div style="display:block;">
           <input id="sembunyikan-gambar" type="checkbox" '.$gambar.'> <label for="sembunyikan-gambar">Sembunyikan gambar</label>
         </div>
       ';
@@ -142,7 +183,9 @@
 			$itemStart = $maxItemShownPerPage * ($page - 1);
 
 			$query_item;
-			if($_GET['category'] != 'sample'){
+      if (isCategoryEqualsKelas()) {
+				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."' ".querySoalMateri()." ORDER BY status desc LIMIT $itemStart,$maxItemShownPerPage");
+      } else  if($_GET['category'] != 'sample'){
 				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."' ORDER BY tanggal desc LIMIT $itemStart,$maxItemShownPerPage");
 			} else {
 				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE status = '".$_GET['category']."' ORDER BY tanggal desc LIMIT $itemStart,$maxItemShownPerPage");
@@ -169,7 +212,9 @@
 			$text_item .= "</ul>";
 			echo $text_item;
 
-			if($_GET['category'] != 'sample'){
+      if (isCategoryEqualsKelas()) {
+				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."' ".querySoalMateri()." ORDER BY status desc");
+      } else if($_GET['category'] != 'sample'){
 				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE category = '".$_GET['category']."' ORDER BY tanggal desc");
 			} else {
 				$query_item = mysqli_query($link,"SELECT * FROM soal WHERE status = '".$_GET['category']."' ORDER BY tanggal desc");

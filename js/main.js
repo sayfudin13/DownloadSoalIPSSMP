@@ -434,4 +434,20 @@ jQuery(function($) {
 		});
 	});
 
+	//showSoalMateri
+	$("#show-soal-materi").change(function(event) {
+		$.post('/showSoalMateri/ssm',{
+			value: $(this).val()
+		}, function(result) {
+			var url = window.location.href;
+			var splitedUrl = url.split("/");
+			splitedUrl[splitedUrl.length-2] = "1";
+			var newUrl = "";
+			for (var i = 0; i < splitedUrl.length-1; i++) {
+				newUrl += splitedUrl[i]+"/";
+			}
+			window.location.replace(newUrl);
+		});
+	});
+
 });
